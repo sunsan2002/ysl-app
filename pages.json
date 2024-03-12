@@ -1,19 +1,62 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "uni-app"
-			}
+			"path" : "pages/index/home"
+		},
+		{
+			"path" : "pages/index/wonderful-life"
+		},
+		{
+			"path" : "pages/index/agenda"
+		},
+		{
+			"path" : "pages/index/exhibition-style"
+		},
+		{
+			"path" : "pages/index/myself"
 		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
+		"navigationBarTitleText": "uni-app-test",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8",
 		"enablePullDownRefresh": true,
 		"backgroundTextStyle": "dark"
+	},
+	"tabBar": {
+		"list": [
+			{
+				"text": "首页",
+				"pagePath": "pages/index/home",
+				"iconPath": "static/tab/home.png",
+				"selectedIconPath": "static/tab/home-active.png"
+			},
+			{
+				"text": "精彩生活",
+				"pagePath": "pages/index/wonderful-life",
+				"iconPath": "static/tab/wonderful-life.png",
+				"selectedIconPath": "static/tab/wonderful-life-active.png"
+			},
+			{
+				"text": "大会议程",
+				"pagePath": "pages/index/agenda",
+				"iconPath": "static/tab/agenda.png",
+				"selectedIconPath": "static/tab/agenda-active.png"
+			},
+			{
+				"text": "展商风采",
+				"pagePath": "pages/index/exhibition-style",
+				"iconPath": "static/tab/exhibtion-style.png",
+				"selectedIconPath": "static/tab/exhibtion-style-active.png"
+			},
+			{
+				"text": "我的",
+				"pagePath": "pages/index/myself",
+				"iconPath": "static/tab/myself.png",
+				"selectedIconPath": "static/tab/myself-active.png"
+			}
+		]
 	},
 	"uniIdRouter": {}
 }

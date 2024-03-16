@@ -14,9 +14,6 @@
 		},
 		{
 			"path" : "pages/index/myself"
-		},
-		{
-			"path" : "pages/components/video/video-item"
 		}
 	],
 	"condition": {

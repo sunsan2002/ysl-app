@@ -1,31 +1,11 @@
 <template>
-	<view class="video-item">
+	<view class="video-item" @click="handleTurnToVideoDetail">
 		<view class="top">
 			<text class="title">
 				{{ data.topText }}
 			</text>
 		</view>
 		<view class="splicer"></view>
-		<view class="middle">
-			<image :src="data.videoItem.imgUrl" style="width:100%"/>
-			<view class="left-top left">{{ data.videoItem.titile }}</view>
-			<view class="left-bottom left">
-				<view class="address">{{data.videoItem.address}}</view>
-				<view class="time">{{data.videoItem.time}}</view>
-			</view>
-			<view class="right-top right">
-				<button size="mini" class="watch">
-					<uni-icons type="refreshempty" size="16" color="white"/>
-					观看回放
-				</button>
-			</view>
-			<view class="right-bottom right">
-				<button size="mini" class="subscribe" plain="true">订阅
-				 <uni-icons type="plusempty" size="11" color="white"></uni-icons>
-				</button>
-			</view>
-			
-		</view>
 		<view class="middle">
 			<image :src="data.videoItem.imgUrl" style="width:100%"/>
 			<view class="left-top left">{{ data.videoItem.titile }}</view>
@@ -60,6 +40,15 @@ const data = reactive({
 		address:"杭州市滨江区文化中心剧院一层"
 	}
 })
+// 跳转详情界面
+const handleTurnToVideoDetail = () =>{
+	uni.navigateTo({
+		url: '/pages/components/video/video-detail',
+		success: res => {},
+		fail: () => {},
+		complete: () => {}
+	});
+}
 </script>
 
 <style scoped lang="less">
@@ -145,12 +134,16 @@ const data = reactive({
 	}
 	.right-bottom{
 		position: absolute;
-		bottom: 15rpx;
+		bottom: 35rpx;
 		right: 15rpx;
 	}
 }
 ::v-deep button{
+	height: 55rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	font-size: 14px;
 	padding: 0rem 1rem;
-}
+} 
 </style>

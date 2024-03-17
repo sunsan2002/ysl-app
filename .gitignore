@@ -1,2 +1,9 @@
 .hbuilderx
 unpackage
+.history
+node_modules
+uniCloud-aliyun
+.config
+.editorconfig
+.eslintignore
+.eslintrc.js

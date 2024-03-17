@@ -1,6 +1,6 @@
 <template>
 	<view>
-		首页
+		<uni-easyinput class="test" v-model="value" placeholder="请输入内容"></uni-easyinput>
 	</view>
 </template>
 
@@ -17,6 +17,8 @@
 	}
 </script>
 
-<style>
-
+<style scoped>
+.test{
+	background: black;
+}
 </style>

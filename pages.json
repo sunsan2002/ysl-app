@@ -1,13 +1,13 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [
+		{
+			"path" : "pages/index/agenda"
+		},
 		{
 			"path" : "pages/index/home"
 		},
 		{
 			"path" : "pages/index/wonderful-life"
-		},
-		{
-			"path" : "pages/index/agenda"
 		},
 		{
 			"path" : "pages/index/exhibition-style"
@@ -16,15 +16,20 @@
 			"path" : "pages/index/myself"
 		}
 	],
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app-test",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8",
-		"enablePullDownRefresh": true,
-		"backgroundTextStyle": "dark"
+	"condition": {
+		"current": 0,
+		"list": [
+			{
+				"name": "大会议程详情页",
+				"path": "pages/components/agenda/agenda-details",
+				"query": "name=ttt"
+			}
+		]
 	},
+	// 菜单
 	"tabBar": {
+		"color": "#8F8F8F",
+		"selectedColor": "#4793DC",
 		"list": [
 			{
 				"text": "首页",
@@ -56,7 +61,16 @@
 				"iconPath": "static/tab/myself.png",
 				"selectedIconPath": "static/tab/myself-active.png"
 			}
-		]
+		],
+		// 全局样式设计
+		"globalStyle": {
+			"navigationBarTextStyle": "black",
+			"navigationBarTitleText": "uni-app-test",
+			"navigationBarBackgroundColor": "#F8F8F8",
+			"backgroundColor": "#F8F8F8",
+			"enablePullDownRefresh": true,
+			"backgroundTextStyle": "dark"
+		}
 	},
 	
 	"uniIdRouter": {

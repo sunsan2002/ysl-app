@@ -1,5 +1,6 @@
 <template>
 	<view class="content">
+		<tabbar :current="1"></tabbar>
 		<view class="activities-content" v-for="item in state.activities" :key="item.name">
 			<image :src="item.img"></image>
 			<view class="text-content" @click="getMsg(item)">
@@ -16,7 +17,7 @@
 
 <script setup>
 import { reactive } from 'vue';
-
+import tabbar from '/components/tabbar.vue'
 const state = reactive({
 	activities: [
 		{

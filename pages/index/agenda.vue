@@ -1,5 +1,6 @@
 <template>
 	<view class="agenda">
+		<tabbar :current="2"></tabbar>
 		<view class="top">
 			<image mode="aspectFill"/>
 			<view class="show-search">
@@ -37,6 +38,7 @@
 
 <script setup>
 import { reactive } from 'vue';
+import tabbar from '/components/tabbar.vue';
 import videoItem from '/pages/components/video/video-item'
 const data = reactive({
 	title:"大会议程",
@@ -75,9 +77,9 @@ const change = () =>{
 		image{
 			width: 100%;
 			height: 380rpx;
-			background:url("https://t7.baidu.com/it/u=1423490396,3473826719&fm=193&f=GIF");
-			-webkit-mask-image: linear-gradient(rgb(200,200,200),75%, transparent);
-			background-size:150% 150%;
+			background:url("https://t7.baidu.com/it/u=872658011,1497098654&fm=193&f=GIF");
+			-webkit-mask-image: linear-gradient(rgb(0,0,0),65%, transparent);
+			background-size:100% 100%;
 		}
 		.show-search{
 			position: absolute;

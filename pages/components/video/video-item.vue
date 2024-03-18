@@ -108,7 +108,7 @@ const data = reactive({
 	color: white;
 	margin-bottom: 0.5rem;
 	image{
-		height: 350rpx;
+		height: 320rpx;
 	}
 	.right{
 		font-size: 13px;

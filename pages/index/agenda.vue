@@ -1,5 +1,6 @@
 <template>
 	<view class="agenda">
+		<tabbar :current="2"></tabbar>
 		<view class="top">
 			<image mode="aspectFill"/>
 			<view class="show-search">
@@ -37,6 +38,7 @@
 
 <script setup>
 import { reactive } from 'vue';
+import tabbar from '/components/tabbar.vue';
 import videoItem from '/pages/components/video/video-item'
 const data = reactive({
 	title:"大会议程",

@@ -1,20 +1,12 @@
 <template>
 	<view>
+		<tabbar :current="3"></tabbar>
 		展 商 风采
 	</view>
 </template>
 
-<script>
-	export default {
-		data() {
-			return {
-				
-			}
-		},
-		methods: {
-			
-		}
-	}
+<script setup>
+	import tabbar from '/components/tabbar.vue';
 </script>
 
 <style>

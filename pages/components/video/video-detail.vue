@@ -16,13 +16,16 @@
 				</view>
 			</view>
 		</view>
-		<view class="middle"></view>
+		<view class="middle">
+			<video-test/>
+		</view>
 		<view class="bottom"></view>
 	</view>
 </template>
 
 <script setup>
 import { reactive } from 'vue';
+import videoTest from '/pages/components/video/video-test'
 const data = reactive({
 	titile:"格致论道@西湖论剑",
 	watchNum:1000

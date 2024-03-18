@@ -1,20 +1,12 @@
 <template>
 	<view>
+		<tabbar :current="4"></tabbar>
 		我的
 	</view>
 </template>
 
-<script>
-	export default {
-		data() {
-			return {
-				
-			}
-		},
-		methods: {
-			
-		}
-	}
+<script setup>
+import tabbar from '/components/tabbar.vue';
 </script>
 
 <style>

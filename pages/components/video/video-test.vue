@@ -1,34 +1,46 @@
 <template>
-  <view>
-    <view id="J_prismPlayer"></view>
-  </view>
+ <!-- <view>
+	<view class="uni-padding-wrap uni-common-mt">
+		<view>
+			<video class="video-show" objectFit="cover" id="myVideo" src="https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/2minute-demo.mp4"
+				@error="videoErrorCallback" :danmu-list="danmuList" enable-danmu danmu-btn controls></video>
+		</view>
+	</view>
+  </view> -->
 </template>
- 
 <script setup>
-import Aliplayer from 'aliplayer';
-
-const player = new Aliplayer({
-  "id": "J_prismPlayer",
-  "autoplay": false,
-  "cover": "http://i.alicdn.com/video/pic/0/normal/1920693713/TB2DHh2j9XXXXb4XVXXXXXXXXXX-1920-1080.jpg_250x250.jpg",
-  "vid": "1ef79cbf44e3460286ff26fdd935cd01",
-  "playauth": "",
-  "source": "video",
-  "width": "100%",
-  "height": "500px"
-}, function(player){
-  console.log('播放器创建好了。')
-});
-onunload(()=>{
-	if(player){
-		player.dispose();
-	}
+import { reactive } from 'vue';
+const data = reactive({
+	// videoConext:null,
+	// // 弹幕
+	// danmuList: [{
+	// 		text: '第 1s 出现的弹幕',
+	// 		color: '#ff0000',
+	// 		time: 1
+	// 	},
+	// 	{
+	// 		text: '第 3s 出现的弹幕',
+	// 		color: '#ff00ff',
+	// 		time: 3
+	// 	}
+	// ],
 })
+// const videoErrorCallback = (e) =>{
+// 	uni.showModal({
+// 		content: e.target.errMsg,
+// 		showCancel: false
+// 	})
+// }
+// const handleChangelookView = (e) =>{
+// 	data.current = e.currentIndex;
+// }
+// onReady: (()=>{
+// 	data.videoConext = uni.createVideoContext('myVideo');
+// })
 </script>
- 
-<style scoped>
-#J_prismPlayer {
-  width: 100%;
-  height: 500px;
+
+<style lang="less">
+.video-show {
+	width: 100%;
 }
 </style>

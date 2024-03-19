@@ -70,7 +70,7 @@
 
 <script setup>
 import { reactive, ref } from "vue";
-import videoTest from "/pages/components/video/video-test";
+import videoTest from "/pages/components/video/video-test.vue";
 import comments from "/pages/components/comments/comments.vue";
 import agenda from "/pages/components/agenda/agenda.vue";
 const data = reactive({
@@ -190,8 +190,8 @@ const handleSendDanmu = () => {
 }
 // 导航栏被选中
 .active {
-  color: #0a79ff;
-  border-bottom: solid 4upx #0a79ff;
+  color: RGB(32,123,196);
+  border-bottom: solid 4upx  RGB(32,123,196);
   font-weight: bolder;
 }
 ::v-deep button {

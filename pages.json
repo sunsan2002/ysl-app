@@ -54,7 +54,7 @@
 				"navigationBarTitleText" : "",
 				"enablePullDownRefresh" : false
 			}
-		}
+		},
 	],
 	"condition": {
 		"current": 0,

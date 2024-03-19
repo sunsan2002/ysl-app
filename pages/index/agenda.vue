@@ -7,7 +7,7 @@
 				<view class="title">{{data.title}}</view>
 				<view class="search">
 					<view class="top-search">
-						<uni-easyinput class="top-search" v-model="data.agendaName" suffixIcon="search"  placeholder="请输入会议名称进行搜索" @iconClick="handleSearchForAgendaName"></uni-easyinput>
+						<uni-easyinput  v-model="data.agendaName" suffixIcon="search"  placeholder="请输入会议名称进行搜索" @iconClick="handleSearchForAgendaName"></uni-easyinput>
 					</view>
 					<view class="buttom-search">
 						<view class="left">

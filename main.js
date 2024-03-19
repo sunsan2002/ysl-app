@@ -5,9 +5,7 @@ import Vue from 'vue'
 import './uni.promisify.adaptor'
 import ElementPlus from 'element-plus';
 import 'element-plus/lib/theme-chalk/index.css';
-import tabbar from 'components/common/tabbar.vue'
 
-Vue.component('tabbar',tabbar)
 Vue.config.productionTip = false
 App.mpType = 'app'
 const app = new Vue({

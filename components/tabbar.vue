@@ -104,6 +104,7 @@ export default {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
+	z-index: 100;
 }
 .middle{
 	border: 2px solid #4792DC;

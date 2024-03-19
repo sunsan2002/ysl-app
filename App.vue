@@ -15,7 +15,7 @@ export default {
 <style>
 /*每个页面公共css */
 /* 文字多余部分用省略号代替，最多两行 */
-.content {
+.text-content {
   word-break: break-word;
   white-space: pre-line;
   overflow: hidden;

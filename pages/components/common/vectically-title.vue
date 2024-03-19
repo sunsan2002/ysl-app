@@ -21,17 +21,17 @@ const props = defineProps({
 <style scoped lang="less">
 .vectically-title {
   .top {
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
     height: 25px;
     border-left: 3px solid;
-    border-image: linear-gradient( RGB(55,200,210), RGB(32,123,196)) 1;
-	margin-bottom: 0.8rem;
+    border-image: linear-gradient(RGB(55, 200, 210), RGB(32, 123, 196)) 1;
+    margin-bottom: 0.8rem;
     .title {
       color: black;
       font-weight: bold;
       margin-left: 20rpx;
-	  font-size: 18px;
+      font-size: 18px;
     }
   }
 }

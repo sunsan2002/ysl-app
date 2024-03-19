@@ -58,8 +58,12 @@
             </view>
           </block>
           <block v-if="data.tabbarIndex == 1">
-            <view class="content-show">
-              <comments></comments>
+            <view
+              class="content-show"
+              v-for="(item, index) in data.commentsList"
+              :key="index"
+            >
+              <comments :commentContent="item"></comments>
             </view>
           </block>
         </view>
@@ -76,7 +80,7 @@ import agenda from "/pages/components/agenda/agenda.vue";
 const data = reactive({
   titile: "格致论道@西湖论剑",
   watchNum: 1000,
-  tabbarIndex: 0,
+  tabbarIndex: 1,
   handlingType: [
     {
       value: "会议议程",
@@ -86,6 +90,26 @@ const data = reactive({
     },
   ],
   danmu: "",
+  commentsList: [
+    {
+      pic: "https://tupian.qqw21.com/article/UploadPic/2020-6/20206417112066435.jpg",
+      userName: "嘻嘻",
+      time: "2024-03-19 18:00:00",
+      title: "2024最佳",
+      content: "我看过的最好的大会简介",
+      commentsNum: 50,
+      likeNum: 100,
+    },
+    {
+      pic: "https://tupian.qqw21.com/article/UploadPic/2020-6/20206417112066435.jpg",
+      userName: "嘻嘻",
+      time: "2024-03-19 18:00:00",
+      title: "2024最佳",
+      content: "我看过的最好的大会简介",
+      commentsNum: 50,
+      likeNum: 100,
+    },
+  ],
 });
 const videoTestRef = ref(null);
 // 切换显示内容
@@ -153,7 +177,7 @@ const handleSendDanmu = () => {
         display: flex;
         justify-content: space-around;
         background-color: white;
-		border-bottom: 1.5px solid RGB(192,196,204);
+        border-bottom: 1.5px solid RGB(192, 196, 204);
         .grid {
           width: 50%;
           height: 100%;
@@ -168,30 +192,30 @@ const handleSendDanmu = () => {
         }
         .right {
           width: 50%;
-		  display: flex;
-		  justify-content: center;
-		  align-items: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           .danmu {
             margin-right: 10rpx;
             ::v-deep .uni-easyinput__content {
               font-size: 28rpx;
               height: 62rpx;
               border-radius: 25px;
-			  background-color: RGB(244,244,246);
+              background-color: RGB(244, 244, 246);
             }
           }
         }
       }
-	  .content{
-		  height: 100%;
-	  }
+      .content {
+        height: 100%;
+      }
     }
   }
 }
 // 导航栏被选中
 .active {
-  color: RGB(32,123,196);
-  border-bottom: solid 4upx  RGB(32,123,196);
+  color: RGB(32, 123, 196);
+  border-bottom: solid 4upx RGB(32, 123, 196);
   font-weight: bolder;
 }
 ::v-deep button {

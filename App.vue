@@ -12,6 +12,9 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	/*每个页面公共css */
+	*{
+		background-color:#F0F1F8;
+	}
 </style>

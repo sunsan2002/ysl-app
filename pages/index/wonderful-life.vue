@@ -1,3 +1,4 @@
+<!-- 精彩生活页面 -->
 <template>
 	<view class="content">
 		<tabbar :current="1"></tabbar>
@@ -66,14 +67,14 @@ const getMsg = (item) => {
 
 <style lang="scss" scoped>
 .content {
-	height: 100vh;
-	width: 100vw;
+	// width: 100vw;
 	background-color: #f0f1f8;
+	padding-bottom: 3rem;
 }
 
 .activities-content {
 	border: E5E5E5;
-	box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+	box-shadow: 0rpx 10rpx 15rpx -3rpx rgba(0, 0, 0, 0.1);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -82,6 +83,7 @@ const getMsg = (item) => {
 }
 .activities-content > image {
 	width: 100%;
+	height:400rpx;
 }
 .text-content {
 	padding: 0 1em;
@@ -93,7 +95,7 @@ const getMsg = (item) => {
 	font-weight: bold;
 }
 .text-content > p {
-	font-size: 0.5rem;
+	font-size: 0.5em;
 	text-align: left;
 }
 .btn-content {
@@ -110,9 +112,9 @@ const getMsg = (item) => {
 	box-sizing: border-box;
 	height: 10%;
 	width: 20%;
-	border: 1px solid #00c6d2;
+	border: 1rpx solid #00c6d2;
 	margin: 0;
-	border-radius: 8.4375px;
+	border-radius: 8.4375rpx;
 	padding: 0 1em;
 	white-space: nowrap;
 	flex-shrink: 0;

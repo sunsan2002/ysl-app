@@ -22,7 +22,7 @@ export default {
 		return {
 			tabBar: {
 				color: '#8F8F8F',
-				selectedColor: '#4793DC',
+				selectedColor: '#4792DC',
 				list: [{
 						iconPath: "/static/tab/home.png",
 						selectedIconPath: "/static/tab/home-active.png",
@@ -106,7 +106,7 @@ export default {
 	width: 100%;
 }
 .middle{
-	border: 2px solid RGB(71,146,220);
+	border: 2px solid #4792DC;
 	background-color: rgb(248,248,248);
 	border-radius:60PX;
 	display: flex;

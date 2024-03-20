@@ -23,7 +23,7 @@
           v-show="props.data.is_like"
           type="hand-up-filled"
           size="24"
-          color="#007aff"
+          color="RGB(32,123,196)"
         ></uni-icons>
         <uni-icons
           v-show="!props.data.is_like"
@@ -191,7 +191,7 @@ function deleteClick(item) {
     }
     .shrink {
       padding: 20rpx 20rpx 20rpx 0rpx;
-      color: $uni-color-primary;
+      color: RGB(32,123,196);
     }
   }
   .bottom {

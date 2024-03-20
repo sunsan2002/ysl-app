@@ -8,7 +8,7 @@
         </view>
       </view>
       <view class="title">{{ props.videoContent.title }}</view>
-      <view class="content text-content">{{ props.videoContent.content }}</view>
+      <view class="content text-content-superfluous">{{ props.videoContent.content }}</view>
     </view>
     <view class="splicer"></view>
   </view>
@@ -38,7 +38,7 @@ const props = defineProps({
       border-radius: 25px;
       padding: 0 10rpx;
       width: 40%;
-      .time-text {
+      .text-content-superfluous {
         margin-left: 20rpx;
       }
     }

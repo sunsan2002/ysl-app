@@ -402,7 +402,7 @@ function expandReplyFun({ item1, index1 }) {
   padding: 150rpx 10rpx;
   font-size: 28rpx;
   .txt {
-    color: $uni-text-color-disable;
+    color: RGB(32,123,196);
   }
   .click {
     color: $uni-color-primary;
@@ -422,7 +422,7 @@ function expandReplyFun({ item1, index1 }) {
       margin-left: 80rpx;
       .txt {
         font-weight: 600;
-        color: $uni-color-primary;
+         color: RGB(32,123,196);
       }
     }
   }

@@ -1,5 +1,5 @@
 <template>
-  <view class="btn" @tap="openComment">发布评论</view>
+  <view class="btn" @tap="openComment" >发布评论</view>
   <CComment
     ref="ccRef"
     v-model:userInfo="userInfo"
@@ -153,7 +153,7 @@ let tableData = ref([
   padding: 20rpx;
   margin: 20rpx;
   border-radius: 20rpx;
-  background-color: #2979ff;
+  background-color: RGB(32,123,196);
 }
 page,
 .content {

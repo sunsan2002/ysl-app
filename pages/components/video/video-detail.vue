@@ -75,7 +75,7 @@ import agenda from "/pages/components/agenda/agenda.vue";
 const data = reactive({
   titile: "格致论道@西湖论剑",
   watchNum: 1000,
-  tabbarIndex: 1,
+  tabbarIndex: 0,
   handlingType: [
     {
       value: "会议议程",

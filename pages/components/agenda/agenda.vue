@@ -67,7 +67,7 @@ const data = reactive({
 	margin: 20rpx;
 	padding: 20rpx;
 	display: block;
-	background-color: RGB(240,240,245);
+	background-color: RGB(240,240,240);
 	border-radius: 4px;
 }
 </style>

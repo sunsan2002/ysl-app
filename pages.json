@@ -56,7 +56,7 @@
 			}
 		},
 		{
-			"path" : "pages/index/my-subscription",
+			"path" : "pages/index/test",
 			"style" : 
 			{
 				"navigationBarTitleText" : "",
@@ -124,5 +124,11 @@
 			
 	"uniIdRouter": {
 		
+	},
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"l-swiper": "/uni-modules/l-swiper/components/l-swiper/l-swiper.vue"
+		}
 	}
 }

@@ -3,15 +3,15 @@ import App from './App'
 // #ifndef VUE3
 import Vue from 'vue'
 import './uni.promisify.adaptor'
-import ElementPlus from 'element-plus';
-import 'element-plus/lib/theme-chalk/index.css';
+import UndrawUi from 'undraw-ui'
+import 'undraw-ui/dist/style.css'
 
 Vue.config.productionTip = false
 App.mpType = 'app'
 const app = new Vue({
   ...App
 })
-app.use(ElementPlus);
+// app.use(UndrawUi)
 app.$mount()
 // #endif
 

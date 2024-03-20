@@ -16,7 +16,7 @@
           </button>
         </view>
         <view class="right-bottom">
-          <uni-icons type="eye" size="20" color="RGB(189,225,251)"></uni-icons>
+          <uni-icons type="eye" size="18" color="RGB(189,225,251)"></uni-icons>
           <view class="watchNum">{{ data.watchNum }}</view>
         </view>
       </view>
@@ -58,11 +58,7 @@
             </view>
           </block>
           <block v-if="data.tabbarIndex == 1">
-            <view
-              class="content-show"
-              v-for="(item, index) in data.commentsList"
-              :key="index"
-            >
+            <view class="content-show" v-for="(item,index) in data.commentsList" :key='index'>
               <comments :commentContent="item"></comments>
             </view>
           </block>
@@ -71,7 +67,6 @@
     </view>
   </view>
 </template>
-
 <script setup>
 import { reactive, ref } from "vue";
 import videoTest from "/pages/components/video/video-test.vue";
@@ -80,7 +75,7 @@ import agenda from "/pages/components/agenda/agenda.vue";
 const data = reactive({
   titile: "格致论道@西湖论剑",
   watchNum: 1000,
-  tabbarIndex: 1,
+  tabbarIndex: 0,
   handlingType: [
     {
       value: "会议议程",
@@ -90,26 +85,17 @@ const data = reactive({
     },
   ],
   danmu: "",
-  commentsList: [
-    {
-      pic: "https://tupian.qqw21.com/article/UploadPic/2020-6/20206417112066435.jpg",
-      userName: "嘻嘻",
-      time: "2024-03-19 18:00:00",
-      title: "2024最佳",
-      content: "我看过的最好的大会简介",
-      commentsNum: 50,
-      likeNum: 100,
-    },
-    {
-      pic: "https://tupian.qqw21.com/article/UploadPic/2020-6/20206417112066435.jpg",
-      userName: "嘻嘻",
-      time: "2024-03-19 18:00:00",
-      title: "2024最佳",
-      content: "我看过的最好的大会简介",
-      commentsNum: 50,
-      likeNum: 100,
-    },
-  ],
+  commentsList:[
+	  {
+	  pic:"https://tupian.qqw21.com/article/UploadPic/2020-6/20206417112066435.jpg",
+	  userName:"嘻嘻",
+	  time:"2024-03-19 18:00:00",
+	  title:"2024最佳",
+	  content:"我看过的最好的大会简介",
+	  commentsNum:50,
+	  likeNum:100,
+	},
+  ]
 });
 const videoTestRef = ref(null);
 // 切换显示内容
@@ -121,7 +107,6 @@ const handleSendDanmu = () => {
   console.log("发送弹幕");
 };
 </script>
-
 <style scoped lang="less">
 .video-detial {
   .top {
@@ -131,7 +116,7 @@ const handleSendDanmu = () => {
     padding: 15rpx 30rpx;
     background-image: url("/static/title-background.jfif");
     background-size: 100% 100%;
-    height: 120rpx;
+    height: 90rpx;
     .left {
       .title {
         font-size: 40rpx;
@@ -158,10 +143,12 @@ const handleSendDanmu = () => {
         }
       }
       .right-bottom {
-        min-width: 140rpx;
+        min-width: 120rpx;
         display: flex;
         justify-content: space-around;
+		align-items: center;
         color: RGB(189, 225, 251);
+		font-size: 12px;
       }
     }
   }
@@ -177,7 +164,7 @@ const handleSendDanmu = () => {
         display: flex;
         justify-content: space-around;
         background-color: white;
-        border-bottom: 1.5px solid RGB(192, 196, 204);
+		border-bottom: 1.5px solid RGB(192,196,204);
         .grid {
           width: 50%;
           height: 100%;
@@ -192,30 +179,30 @@ const handleSendDanmu = () => {
         }
         .right {
           width: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
           .danmu {
             margin-right: 10rpx;
             ::v-deep .uni-easyinput__content {
               font-size: 28rpx;
               height: 62rpx;
               border-radius: 25px;
-              background-color: RGB(244, 244, 246);
+			  background-color: RGB(244,244,246);
             }
           }
         }
       }
-      .content {
-        height: 100%;
-      }
+	  .content{
+		height: 100%;
+	  }
     }
   }
 }
 // 导航栏被选中
 .active {
-  color: RGB(32, 123, 196);
-  border-bottom: solid 4upx RGB(32, 123, 196);
+  color: RGB(32,123,196);
+  border-bottom: solid 4upx  RGB(32,123,196);
   font-weight: bolder;
 }
 ::v-deep button {

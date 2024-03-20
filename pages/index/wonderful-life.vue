@@ -102,6 +102,7 @@ const getMsg = (item) => {
 }
 .activities-content > image {
   width: 100%;
+  height:400rpx;
 }
 .text-content {
   padding: 0 1em;

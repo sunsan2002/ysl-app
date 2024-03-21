@@ -1137,7 +1137,9 @@
 <style lang="scss" scoped>
 .article-box {
   padding: 1rem;
-  background-image: linear-gradient(to right, #86feda 0%, #00c6d2 100%);
+  // background-image: linear-gradient(to right, #e5fef7 0%, #d4fbff 100%);
+  // box-shadow: 0px 0px 15px -2px rgba(0,0,0,0.2);
+  background-color: #d1ecf8;
 }
 .image {
   width: 100%;

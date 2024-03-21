@@ -1,62 +1,71 @@
 {
 	"pages": [
 		{
-			"path" : "pages/index/agenda"
+			"path": "pages/index/agenda"
 		},
 		{
-			"path" : "pages/index/home"
+			"path": "pages/index/home"
 		},
 		{
-			"path" : "pages/index/wonderful-life"
+			"path": "pages/index/wonderful-life"
 		},
 		{
-			"path" : "pages/index/exhibition-style"
+			"path": "pages/index/exhibition-style"
 		},
 		{
-			"path" : "pages/index/myself"
+			"path": "pages/index/myself"
 		},
 		{
-			"path" : "pages/components/video/video-detail",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
+			"path": "pages/components/video/video-detail",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
 			}
 		},
 		{
-			"path" : "pages/index/news-msg",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
+			"path": "pages/index/news-msg",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
 			}
 		},
 		{
-			"path" : "pages/components/article/article-item",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
+			"path": "pages/components/article/article-item",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
 			}
 		},
 		{
-			"path" : "pages/index/article-msg",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
+			"path": "pages/index/article-msg",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
 			}
 		},
 		{
-			"path" : "pages/components/video/video-test",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
+			"path": "pages/components/video/video-test",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
 			}
 		},
 		{
-			"path" : "pages/index/test",
+			"path": "pages/index/test",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/index/my-subscription",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/components/wonderful-life-item/wonderful-life-item",
 			"style" : 
 			{
 				"navigationBarTitleText" : "",
@@ -66,13 +75,11 @@
 	],
 	"condition": {
 		"current": 0,
-		"list": [
-			{
-				"name": "大会议程详情页",
-				"path": "pages/components/video/video-detail"
-				// "query": "name=ttt"
-			}
-		]
+		"list": [{
+			"name": "大会议程详情页",
+			"path": "pages/components/video/video-detail"
+			// "query": "name=ttt"
+		}]
 	},
 	// 菜单
 	// "tabBar": {
@@ -112,18 +119,18 @@
 	// 			"selectedIconPath": "static/tab/myself-active.png"
 	// 		}
 	// 	],
-		// 全局样式设计
-		"globalStyle": {
-			"navigationBarTextStyle": "black",
-			"navigationBarTitleText": "uni-app-test",
-			"navigationBarBackgroundColor": "#F8F8F8",
-			"backgroundColor": "#F8F8F8",
-			"enablePullDownRefresh": true,
-			"backgroundTextStyle": "dark"
-		},
-			
+	// 全局样式设计
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app-test",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"enablePullDownRefresh": true,
+		"backgroundTextStyle": "dark"
+	},
+
 	"uniIdRouter": {
-		
+
 	},
 	"easycom": {
 		"autoscan": true,

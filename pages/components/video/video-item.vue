@@ -15,7 +15,7 @@
 <script setup>
 import { reactive } from "vue";
 import videoNewsTitle from "/pages/components/common/video-news-title.vue";
-import videoItemShow from "/pages/components/common/video-item-show.vue";
+import videoItemShow from "/pages/components/common/video.vue";
 const data = reactive({
   title: " 5月5日 下午 ",
   videoItem: {

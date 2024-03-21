@@ -14,9 +14,7 @@ export default {
 
 <style>
 /*每个页面公共css */
-/* * {
-  background-color: #f0f1f8;
-} /*每个页面公共css */ 
+ /*每个页面公共css 
 /* 文字多余部分用省略号代替，最多两行 */
 .text-content-superfluous {
   word-break: break-word;
@@ -27,4 +25,9 @@ export default {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+</style>
+<style scoped>
+	* {
+	  background-color: #f0f1f8;
+	}
 </style>

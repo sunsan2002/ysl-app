@@ -12,6 +12,18 @@
 				<uni-icons color="#fff" type="calendar" size="20"></uni-icons>
 				已签到
 			</button>
+			<view class="avatar">
+				<view class="avatar-img"></view>
+				<view class="avatar-text">
+					<p>sunsan</p>
+					<view class="score">
+						<img src="/static/icon/score-icon.png" />
+						<p>400 </p>
+						<uni-icons type="right" size="10" color="#fff"></uni-icons>
+					</view>
+					
+				</view>
+			</view>
 			<view class="bottom-box">
 				<view class="btn-box">
 					<view class="btn-content">
@@ -27,7 +39,7 @@
 						<span class="btn-text">邀请好友</span>
 					</view>
 					<view class="btn-content">
-						<button class="btn1" style="background-color: #ffdc11;" @click="goTo('')"><uni-icons type="notification-filled" color="#fff"  size="35"></uni-icons></button>
+						<button class="btn1" style="background-color: #ffdc11;" @click="goTo('/pages/index/my-subscription')"><uni-icons type="notification-filled" color="#fff"  size="35"></uni-icons></button>
 						<span class="btn-text">我的订阅</span>
 					</view>
 				</view>
@@ -76,6 +88,35 @@ const goTo = (url) => {
 </script>
 
 <style lang="scss" scoped>
+	
+.avatar{
+	display: flex;
+	flex-direction: row;
+	position: fixed;
+	top: 150rpx;
+	gap:40rpx;
+	left: 40rpx;
+	align-items: center;
+}
+.avatar-img{
+	border-radius: 50% 50%;
+	height: 110rpx;
+	width: 110rpx;
+	background: url("../../static/icon/user-icon.png");
+	background-color: #efefef;
+	background-position: center;
+	background-size: cover;
+	border: 6rpx solid #ffffff;
+	box-sizing: bord;
+}
+.avatar-text{
+	line-height: 50rpx;
+}
+.avatar-text>p{
+	color: #ffffff;
+	font-weight: bold;
+	text-shadow: 4rpx 4rpx 0px rgba(0,0,0,0.1)
+}
 .my-integral {
 	display: flex;
 	flex-direction: row;
@@ -87,6 +128,20 @@ const goTo = (url) => {
 	
 	margin-left: 60rpx;
 	font-family: "华文琥珀";
+}
+.score{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 12rpx;
+}
+.score>img{
+	height: 40rpx;
+}
+.score>p{
+	color: #fff;
+	text-shadow: 4rpx 4rpx 0px rgba(0,0,0,0.1);
+	font-weight: bold;
 }
 .my-integral-font{
 	padding: 40rpx 0;
@@ -147,7 +202,7 @@ const goTo = (url) => {
 	align-items: center;
 	image {
 		width: 100%;
-		height: 26vh;
+		height: 24vh;
 	}
 }
 .my-integral-text {

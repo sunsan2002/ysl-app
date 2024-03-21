@@ -6,7 +6,7 @@
 			<view class="left-top">{{ articleItem.title }}</view>
 			<view class="left-bottom">{{ articleItem.time }}</view>
 			<view class="right-bottom">
-				<button size="mini" class="watch" @click="goTo()">了解详情</button>
+				<button size="mini" class="watch" style="background-color: RGB(29, 220, 227);" @click="goTo()">了解详情</button>
 			</view>
 		</view>
 	</view>

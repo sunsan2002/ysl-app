@@ -5,7 +5,7 @@
         <p>{{ item.name }}</p>
       </view>
     </view>
-    <view class="middle" v-if="item.isSubscription">
+    <view class="middle" v-if="item.type">
       <video-item class="video-item" />
       <video-item class="video-item" />
     </view>

@@ -4,6 +4,9 @@
 			"path": "pages/index/agenda"
 		},
 		{
+			"path" : "pages/components/video/video-detail"
+		},
+		{
 			"path": "pages/index/home"
 		},
 		{
@@ -13,73 +16,35 @@
 			"path": "pages/index/exhibition-style"
 		},
 		{
-			"path": "pages/index/myself"
+			"path": "pages/index/exhibition-item"
 		},
 		{
-			"path": "pages/components/video/video-detail",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+			"path" : "pages/index/myself"
 		},
 		{
-			"path": "pages/index/news-msg",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+			"path" : "pages/index/news-msg"
 		},
 		{
-			"path": "pages/components/article/article-item",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+			"path" : "pages/index/article-msg"
 		},
 		{
-			"path": "pages/index/article-msg",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-		},
-		{
-			"path": "pages/components/video/video-test",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-		},
-		{
-			"path": "pages/index/test",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-		},
-		{
-			"path": "pages/index/my-subscription",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-		},
-		{
-			"path" : "pages/components/wonderful-life-item/wonderful-life-item",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
-			}
+			"path" : "pages/index/test"
 		}
 	],
 	"condition": {
 		"current": 0,
-		"list": [{
-			"name": "大会议程详情页",
-			"path": "pages/components/video/video-detail"
-			// "query": "name=ttt"
-		}]
+		"list": [
+			{
+				"name": "大会议程详情页",
+				"path": "pages/components/video/video-detail"
+				// "query": "name=ttt"
+			},
+			{
+				"name": "展商风采详情页",
+				"path": "pages/index/exhibition-item"
+				// "query": "name=ttt"
+			}
+		]
 	},
 	// 菜单
 	// "tabBar": {

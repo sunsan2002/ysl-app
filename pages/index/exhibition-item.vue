@@ -22,6 +22,7 @@
     </view>
     <view class="posters">
       <view class="btn" @click="handleUpdownPost">下载海报</view>
+	  <poster-company ref="posterUploadRef" v-show="data.showPoster"></poster-company>
     </view>
   </view>
 </template>
@@ -30,7 +31,8 @@
 import { onLoad } from "@dcloudio/uni-app";
 import videoItem from "/pages/components/video/video-test.vue";
 import companyTitle from "/pages/components/common/company-title.vue";
-import { reactive } from "vue";
+import posterCompany from '/pages/components/poster/poster-company.vue'
+import { reactive,ref } from "vue";
 const data = reactive({
   companyNews: {
     logo: "https://img.zcool.cn/community/0101c15ed9c569a801215aa03820d8.jpg@1280w_1l_2o_100sh.jpg",
@@ -46,10 +48,12 @@ const data = reactive({
     "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1kkKXo.img",
     "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1kkutD.img",
   ],
+  showPoster:false
 });
 //下载海报
+const posterUploadRef = ref(null);
 const handleUpdownPost = () => {
-  console.log(111);
+	posterUploadRef.value.savePic();
 };
 onLoad((options) => {
   data.companyNews.title = options.name;

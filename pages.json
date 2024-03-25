@@ -29,7 +29,7 @@
 		},
 		{
 			"path" : "pages/index/test"
-		}
+		},
 	],
 	"condition": {
 		"current": 0,
@@ -46,44 +46,6 @@
 			}
 		]
 	},
-	// 菜单
-	// "tabBar": {
-	// 	"color": "#8F8F8F",
-	// 	"selectedColor": "#4793DC",
-	// 	"borderStyle": "black",
-	// 	"backgroundColor": "#ffffff",
-	// 	"list": [
-	// 		{
-	// 			"text": "首页",
-	// 			"pagePath": "pages/index/home",
-	// 			"iconPath": "static/tab/home.png",
-	// 			"selectedIconPath": "static/tab/home-active.png"
-	// 		},
-	// 		{
-	// 			"text": "精彩生活",
-	// 			"pagePath": "pages/index/wonderful-life",
-	// 			"iconPath": "static/tab/wonderful-life.png",
-	// 			"selectedIconPath": "static/tab/wonderful-life-active.png"
-	// 		},
-	// 		{
-	// 			"text": "大会议程",
-	// 			"pagePath": "pages/index/agenda",
-	// 			"iconPath": "static/tab/agenda.png",
-	// 			"selectedIconPath": "static/tab/agenda-active.png"
-	// 		},
-	// 		{
-	// 			"text": "展商风采",
-	// 			"pagePath": "pages/index/exhibition-style",
-	// 			"iconPath": "static/tab/exhibtion-style.png",
-	// 			"selectedIconPath": "static/tab/exhibtion-style-active.png"
-	// 		},
-	// 		{
-	// 			"text": "我的",
-	// 			"pagePath": "pages/index/myself",
-	// 			"iconPath": "static/tab/myself.png",
-	// 			"selectedIconPath": "static/tab/myself-active.png"
-	// 		}
-	// 	],
 	// 全局样式设计
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

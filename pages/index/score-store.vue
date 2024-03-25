@@ -28,7 +28,7 @@
 		<view class="middle">
 			<view class="btn-box">
 				
-				<button class="btn1"><img src="/static/icon/积分-实色.png" /></button>积分明细
+				<button class="btn1"  @click="goTo('/pages/index/score-detail')"><img src="/static/icon/积分-实色.png" /></button>积分明细
 			</view>
 			<view class="btn-box">
 				
@@ -60,6 +60,12 @@ const msgText = ref('****3547用户抽中大礼包一盒。');
 
 // 获取公告栏文本元素的引用
 // let msgText = document.getElementById('msgText');
+
+const goTo = (url) => {
+	uni.navigateTo({
+	  url:url
+	});
+}
 
 const state = reactive({
 	goodsList:[

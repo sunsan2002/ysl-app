@@ -103,6 +103,14 @@
 				"navigationBarTitleText" : "",
 				"enablePullDownRefresh" : false
 			}
+		},
+		{
+			"path" : "pages/index/score-detail",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
 		}
 	],
 	"condition": {

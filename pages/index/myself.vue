@@ -48,7 +48,7 @@
 					<view class="my-integral-font my-integral-left" @click="goTo('/pages/index/score-store')"><span>积分商城</span></view>
 					<view class="my-integral-right">
 						<view class="my-integral-font my-integral-rules" @click="goTo('/pages/index/score-rules')"><span>积分规则</span></view>
-						<view class="my-integral-font my-integral-detail"><span>积分明细</span></view>
+						<view class="my-integral-font my-integral-detail"  @click="goTo('/pages/index/score-detail')"><span>积分明细</span></view>
 					</view>
 				</view>
 				<button class="logout">退出登录</button>

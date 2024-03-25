@@ -47,6 +47,8 @@ onReady: () => {
 <style lang="less" scoped>
 .uni-padding-wrap {
   height: 400rpx;
+  margin:0;
+  padding:0;
 }
 .video-show {
   width: 100%;

@@ -45,7 +45,7 @@
 				</view>
 				<p class="my-integral-text">我的积分</p>
 				<view class="my-integral">
-					<view class="my-integral-font my-integral-left"><span>积分商城</span></view>
+					<view class="my-integral-font my-integral-left" @click="goTo('/pages/index/score-store')"><span>积分商城</span></view>
 					<view class="my-integral-right">
 						<view class="my-integral-font my-integral-rules"><span>积分规则</span></view>
 						<view class="my-integral-font my-integral-detail"><span>积分明细</span></view>

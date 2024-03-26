@@ -98,8 +98,9 @@ const handleTurnToExhibtionItem = () => {
     .exhibition-item {
       .swiper-box {
         width: 100%;
-        height: 1050rpx;
+        height: 81vh;
         .swiper-item {
+			height: 1000rpx;
           display: flex;
           flex-direction: column;
           justify-content: center;

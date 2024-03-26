@@ -31,73 +31,26 @@
 			"path" : "pages/index/test"
 		},
 		{
-			"path": "pages/components/video/video-test",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+			"path": "pages/index/my-subscription"
 		},
 		{
-			"path": "pages/index/test",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+			"path" : "pages/components/wonderful-life-item/wonderful-life-item"
 		},
 		{
-			"path": "pages/index/my-subscription",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+			"path" : "pages/index/score-store"
 		},
 		{
-			"path" : "pages/components/wonderful-life-item/wonderful-life-item",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
-			}
+			"path" : "pages/components/store/store-item"
+			
 		},
 		{
-			"path" : "pages/index/score-store",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
-			}
+			"path" : "pages/index/get-award"
 		},
 		{
-			"path" : "pages/components/store/store-item",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
-			}
+			"path" : "pages/index/score-rules"
 		},
 		{
-			"path" : "pages/index/get-award",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
-			}
-		},
-		{
-			"path" : "pages/index/score-rules",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
-			}
-		},
-		{
-			"path" : "pages/index/score-detail",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
-			}
+			"path" : "pages/index/score-detail"
 		}
 	],
 	"condition": {

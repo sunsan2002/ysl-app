@@ -195,7 +195,6 @@ const handleSendDanmu = () => {
       }
 	  .content{
 		height: 100%;
-		// color: ;
 	  }
     }
   }

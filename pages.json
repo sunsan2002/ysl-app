@@ -1,13 +1,13 @@
 {
 	"pages": [
 		{
+			"path": "pages/index/home"
+		},
+		{
 			"path": "pages/index/agenda"
 		},
 		{
 			"path" : "pages/components/video/video-detail"
-		},
-		{
-			"path": "pages/index/home"
 		},
 		{
 			"path": "pages/index/wonderful-life"
@@ -106,12 +106,10 @@
 			{
 				"name": "大会议程详情页",
 				"path": "pages/components/video/video-detail"
-				// "query": "name=ttt"
 			},
 			{
 				"name": "展商风采详情页",
 				"path": "pages/index/exhibition-item"
-				// "query": "name=ttt"
 			}
 		]
 	},

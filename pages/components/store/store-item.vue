@@ -8,8 +8,8 @@
 		<p class="msg">{{goods.msg}}</p>
 		<view class="get">
 			<span class="score">{{goods.score}}</span>积分
-			<!-- +<span class="score">{{goods.money}}</span>元 -->
-			<button>兑换</button>
+			+<span>{{goods.money}}</span>元
+			<view class="score-btn">兑换</view>
 		</view></view>
 	</view>
 </template>
@@ -36,7 +36,7 @@ const props = defineProps({
 .box{
 	display: flex;
 	flex-direction: column;
-	height:550rpx;
+	height:600rpx;
 	width:48%;
 	background-color: #fff;
 	border-radius: 20rpx 20rpx;
@@ -45,6 +45,7 @@ const props = defineProps({
 		object-fit: contain;
 		height: 57%;
 	}
+	position: relative;
 }
 .name{
 	font-weight: bold;
@@ -61,23 +62,23 @@ const props = defineProps({
 	// justify-content:space-around;
 	color:#7f7f7f ;
 	font-size: 20rpx;
-	margin-top: 20rpx;
 	position: relative;
-	button{
+	margin-top: 20rpx;	
+}.score-btn{
 		height: 40rpx;
-		width: 130rpx;
+		width: 80rpx;
 		color:#00c6d2;
 		display: flex;
-		font-size: 20rpx;
+		font-size: 16rpx;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		border:1rpx solid #00c6d2;
 		border-radius: 30rpx 30rpx;
 		position: absolute;
-		right: 0;
+		right: 0rpx;
+		bottom:0rpx;
 	}
-}
 .score{
 	color: #00c6d2;
 	font-size: 26rpx;

@@ -1,115 +1,314 @@
+<!-- 抽奖页面 -->
 <template>
-	<view>
-		 <ul id="list">
-		            <!-- img标签放奖品图片 -->
-		            <!-- mask类为抽奖滚动起来的标记 -->
-		            <li><img src="images/1.png"/><div class="mask"></div></li>
-		            <li><img src="images/2.png"/><div class="mask"></div></li>
-		            <li><img src="images/3.png"/><div class="mask"></div></li>
-		            <li><img src="images/4.png"/><div class="mask"></div></li>
-		            <span id="startbutton" onclick="startlottery()" style="background-color:#ff3a59;color:white;font-size: 20px;">开始抽奖</span>
-		            <li><img src="images/5.png"/><div class="mask"></div></li>
-		            <li><img src="images/6.png"/><div class="mask"></div></li>
-		            <li><img src="images/7.png"/><div class="mask"></div></li>
-		            <li><img src="images/8.png"/><div class="mask"></div></li>
-		        </ul>
-				<div id="message"></div><!-- 获奖信息展示 -->
+	<view class="content">
+		<view class="title">
+			<img src="https://c1.lezhi99.com/template/transfer/mobile/css/img/default/logo.png?r=6" />
+			<!-- 幸运大抽奖 -->
+		</view>
+		<view class="grid-box">
+			<view class="grid-box__inner">
+				<view class="grid-box__item prize" v-for="(prize, i) in state.list" :class="{ active: state.curIndex === i }" :style="getGridItemStyle(i)" :key="'prize' + i">
+					<img v-if="prize.isImg" class="prizeImg" :src="prize.imgUrl" />
+					<span :class="{ isText: prize.isImg === false }">{{ prize.label }}</span>
+				</view>
+				<view class="grid-box__item start-btn" style="background-color: #ff5500; color: #fff" @click="handleClickStartBtn()">
+					<!-- <view class="start-btn"></view> -->
+					开始抽奖
+					<span style="font-weight: 300; font-size: 24rpx">400积分/次</span>
+				</view>
+			</view>
+		</view>
+		<view class="msg">
+			<view class="top">
+				<span>以下是中奖人员>>></span>
+			</view>
+			<view>
+				<view class="table" v-for="item in state.people">
+					<view class="avatar">
+						<img :src="item.avatar" />
+						{{ item.name }}获得了{{ item.award }}
+					</view>
+					<span>{{item.date}}</span>
+				</view>
+			</view>
+		</view>
+		<view>
+			<!-- 普通弹窗 -->
+			<uni-popup ref="popup" background-color="#fff">
+				<view class="popup-content">
+					<span>恭喜！获得{{ state.list[state.curIndex].label }}</span>
+				</view>
+			</uni-popup>
+		</view>
 	</view>
 </template>
 
 <script setup>
- var container = document.getElementById('container'),
-        li = container.getElementsByTagName('li'),
-        span = document.getElementById('startbutton'),
-        message = document.getElementById('message'),
-        timer = null;
-        bReady = true;//定义一个抽奖开关
+import { reactive, ref } from 'vue';
 
-    var prize = [0,1,2,4,7,6,5,3];//奖品li标签滚动的顺序
+const popup = ref(null);
 
-    var num = 0;//num用来存放得到的随机函数，也就是抽中的奖品
+const state = reactive({
+	list: [
+		{ label: '定制u盘', imgUrl: 'https://s1.lezhi99.com/storage/prize/system/digital/30-10.png', isImg: true },
+		{ label: '手机一台', imgUrl: 'https://s1.lezhi99.com/storage/prize/system/digital/10-10.png', isImg: true },
+		{ label: 'ps5一台', imgUrl: 'https://s1.lezhi99.com/storage/prize/system/digital/10-60.png', isImg: true },
+		{ label: '现金600元', imgUrl: '/static/icon/红包.png', isImg: true },
+		{ label: '再来一次', imgUrl: '', isImg: false },
+		{ label: '腾讯VIP', imgUrl: 'https://s1.lezhi99.com/storage/prize/system/general/00-80.png', isImg: true },
+		{ label: '谢谢参与', imgUrl: '', isImg: false },
+		{ label: '大礼包', imgUrl: '/static/icon/礼盒 (2).png', isImg: true }
+	],
+	people: [
+		{
+			name: '用户****1234',
+			award: 'u盘一枚',
+			avatar: 'https://s1.lezhi99.com/static/image/no_avatar.png',
+			date: '2023-12-13'
+		},
+		{
+			name: '用户****1234',
+			award: 'u盘一枚',
+			avatar: 'https://s1.lezhi99.com/static/image/no_avatar.png',
+			date: '2023-12-13'
+		},
+		{
+			name: '用户****1234',
+			award: 'u盘一枚',
+			avatar: 'https://s1.lezhi99.com/static/image/no_avatar.png',
+			date: '2023-12-13'
+		},
+		{
+			name: '用户****1234',
+			award: 'u盘一枚',
+			avatar: 'https://s1.lezhi99.com/static/image/no_avatar.png',
+			date: '2023-12-13'
+		},
+		{
+			name: '用户****1234',
+			award: 'u盘一枚',
+			avatar: 'https://s1.lezhi99.com/static/image/no_avatar.png',
+			date: '2023-12-13'
+		},
+		{
+			name: '用户****1234',
+			award: 'u盘一枚',
+			avatar: 'https://s1.lezhi99.com/static/image/no_avatar.png',
+			date: '2023-12-13'
+		},
+		{
+			name: '用户****1234',
+			award: 'u盘一枚',
+			avatar: 'https://s1.lezhi99.com/static/image/no_avatar.png',
+			date: '2023-12-13'
+		},
+	],
+	curIndex: null,
+	isTurning: false
+});
 
-    //开始抽奖
-    function startlottery(){
-        if(bReady) {//当抽奖开关为true的时候，可点击抽奖
-            message.style.display="none";//将获奖信息div隐藏（以防止上次抽奖信息还显示）
-            span.style.background="#ada7a8";
-            bReady = false;//抽奖开关设为false 处于抽奖中 即不能点击抽奖
-            num = getrandomnum(1,9)//得到一个随机数（即奖品）
-            // console.log(num)
-            startinit(num);//执行抽奖初始化
-        }
-    }
+function getGridItemStyle(index) {
+	const gutter = 15; // 间距
+	const width_height = 170; // 宽度 | 高度
+	const margin = gutter + width_height;
 
+	const map = {
+		0: `translate(-${margin}rpx,-${margin}rpx)`,
+		1: `translate( 0rpx,-${margin}rpx)`,
+		2: `translate( ${margin}rpx,-${margin}rpx)`,
+		3: `translate( ${margin}rpx,0rpx)`,
+		4: `translate(${margin}rpx,${margin}rpx)`,
+		5: `translate(0rpx,${margin}rpx)`,
+		6: `translate(-${margin}rpx,${margin}rpx)`,
+		7: `translate(-${margin}rpx,0rpx)`
+	};
 
-    //抽中的奖品 返回1-9的整数，包含1，不包含9
-    function getrandomnum(n, m) {
-        return parseInt((m - n) * Math.random() + n);
-    }
+	return {
+		transform: map[index] || ''
+	};
+}
+function handleClickStartBtn() {
+	if (state.isTurning) return;
+	turn();
+}
+function turn() {
+	const winningIndex = getWinningIndex();
 
+	state.curIndex = 0;
+	state.isTurning = true;
 
-    //抽奖初始化
-    function startinit(num) {
-        var i = 0;  //定义一个i 用来计算抽奖跑动的总次数
-        var t =200;  //抽奖跑动的速度 初始为200毫秒
-        var rounds = 5;  //抽奖转动的圈数
-        var rNum = rounds*8;  //标记跑动的次数（这是一个条件判断分界线）
-        timer = setTimeout(startscroll, t);//每t毫秒执行startscroll函数
+	const lastSpeed = 600; // 最终速度（ 速度 ==> setTimeout 的 延迟时间）
+	const startSpeed = 80; // 初始速度
+	const count = 4; // 转的圈数
+	const speedDownNum = 15; // 倒数第 speedDownNum 次开始减速
+	const speed = (lastSpeed - startSpeed) / speedDownNum; // 平均每次减速的量
 
+	let index = 0; // 变换的次数
+	let time = startSpeed; // setTimeout 的 延迟时间
 
-        //抽奖滚动的函数
-        function startscroll() {
+	// 通过动态修改 setTimeout 的延迟时间 来达到变换速度的效果
+	let setTime = () => {
+		setTimeout(() => {
+			// 判断是否开始减速
+			if (index >= count * 8 + winningIndex - speedDownNum) {
+				time += speed;
+			}
+			console.log(state.curIndex);
+			index++;
+			state.curIndex = index % 8;
 
-            //每次滚动抽奖将所有li的class都设为空
-            for(var j = 0; j < li.length; j++) {
-                li[j].className = '';
-            }
+			// 当 index 小于 总数时 设置下一次 timeout
+			if (index < count * 8 + winningIndex) {
+				setTime();
+			} else {
+				state.isTurning = false;
 
-            var prizenum = prize[i%li.length];  //通过i余8得到此刻在prize数组中的数字，该数字就是mask标记出现的位置
-            li[prizenum].className = "active";
-            i++;
+				if (state.curIndex === 5 || state.curIndex === 7) {
+				} else popup.value.open();
+				console.log('中奖了，奖品为：' + state.list[state.curIndex].label);
+			}
+		}, time);
+	};
 
-            if(i<rNum-8){  //当i小于转(rNum-8次)的数量，t不变还是200毫秒
-                timer = setTimeout(startscroll, t);//继续执行抽奖滚动
-            }else if(i>= rNum-8 && i< rNum+num){
-                //t时间变长，此时计时器运行速度降低，同时标签刷新速度也降低
-                t+=(i-rNum+8)*5;
-                timer = setTimeout(startscroll, t);//继续执行抽奖滚动
-            }
-            if( i >= rNum+num){//当i大于转rNum加随机数字num次计时器结束，出现提示框提示中奖信息
-
-                if (num==1) {
-                   message.innerHTML="恭喜你中了耳机";
-                }else if(num==2){
-                   message.innerHTML="恭喜你中了iPad";
-                }else if(num==3){
-                   message.innerHTML="感谢参与";
-                }else if(num==4){
-                   message.innerHTML="恭喜你中了洋娃娃";
-                }else if(num==5){
-                   message.innerHTML="恭喜你中了红色鞋子";
-                }else if(num==6){
-                   message.innerHTML="恭喜你中了白色手机";
-                }else if(num==7){
-                   message.innerHTML="恭喜你中了黑色手机";
-                }else if(num==8){
-                   message.innerHTML="恭喜你中了蓝色鞋子";
-                }
-
-                var timer2 = null;
-                timer2 = setTimeout(function(){
-                    message.style.display="block";//奖品展示的信息为显示状态
-                    span.style.background="#ff3a59";
-                    clearTimeout(timer2);
-                },1000);
-                bReady = true;//当计时器结束后让span标签变为抽奖状态
-                clearTimeout(timer);
-            }
-
-        }
-    }
+	setTime();
+}
+function getWinningIndex() {
+	return parseInt(Math.random() * 8, 10);
+}
 </script>
 
 <style lang="scss" scpoed>
+.content {
+	min-height: 100vh;
+	background-image: url('https://c1.lezhi99.com/template/transfer/mobile/css/img/default/bg.jpg?r=8');
+	padding: 20rpx;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-size: cover;
+}
+.isText {
+	color: #ffaa00;
+	font-family: '华文琥珀';
+}
+.title {
+	color: #ffea02;
+	font-weight: bold;
+	font-family: '华文琥珀';
+	font-size: 100rpx;
+	margin: 100rpx;
+	margin-bottom: 20rpx;
+	white-space: 8rpx;
+}
+.prize:nth-child(4) > img {
+	transform: scale(0.9);
+}
+.prize:nth-child(8) > img {
+	transform: scale(0.8);
+}
+.title > img {
+	height: 300rpx;
+}
+.grid-box {
+	background-image: url('https://c1.lezhi99.com/template/transfer/mobile/css/img/default/transferBg.png?r=3');
+	width: 600rpx;
+	background-size: cover;
+	height: 600rpx;
+	border-radius: 30rpx;
+	background-color: #ffe593;
+	padding: 23rpx;
+	box-shadow: -8rpx 16rpx 38rpx -20rpx rgba(0, 0, 0, 0.2);
+}
+.grid-box__inner {
+	width: 100%;
+	height: 100%;
+	// border-radius: 30rpx;
+	// background-color: #fe5c26;
+	position: relative;
+}
+.prizeImg {
+	height: 100rpx;
+}
+.grid-box__item {
+	background-image: linear-gradient(-60deg, #fff 0%, #fef3d0 100%);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -85rpx;
+	margin-top: -85rpx;
 
+	width: 170rpx;
+	height: 170rpx;
+	background-color: #fffdf3;
+	border-radius: 15rpx;
+	color: #000000;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.grid-box__item:last-child {
+	background-image: linear-gradient(-60deg, #fe7a06 0%, #ff3336 100%);
+	box-shadow: -10rpx 16rpx 16rpx -20rpx rgba(0, 0, 0, 11);
+	font-weight: bold;
+}
+.active {
+	background-image: linear-gradient(-60deg, #ffdf27 0%, #f6ff00 100%);
+}
+.start-btn {
+	cursor: pointer;
+	background-color: #ff5500;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.popup-content {
+	height: 250rpx;
+	width: 400rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	span {
+	}
+}
+uni-popup {
+	border-radius: 30rpx;
+}
+.msg{
+	background-color:#fff;
+	// padding:30rpx;
+	width:92%;
+	margin-top:100rpx;
+	border-radius: 15rpx;
+	background-color: #FEEFCC;
+}
+.top{
+	color:#FFE800;
+	font-weight:bold;
+	padding: 20rpx;
+	background-color: #ff5500;
+	  border-radius: 15rpx 15rpx 0 0; 
+}
+.table{
+	display: flex;
+	flex-direction: row;
+	padding:30rpx 20rpx;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 22rpx;
+	border-bottom:2rpx solid #cfa7a7;
+}
+.avatar>img{
+	height:40rpx;
+	border-radius:50% 50%;
+}
+.avatar{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 22rpx;
+	gap:14rpx;
+}
 </style>

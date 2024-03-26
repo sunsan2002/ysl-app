@@ -32,7 +32,7 @@
 			</view>
 			<view class="btn-box">
 				
-				<button class="btn1"><img src="/static/icon/订单.png" /></button>积分抽奖
+				<button class="btn1"  @click="goTo('/pages/index/get-award')"><img src="/static/icon/订单.png" /></button>积分抽奖
 			</view>
 			<view class="btn-box">
 				

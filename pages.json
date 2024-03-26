@@ -38,13 +38,6 @@
 			}
 		},
 		{
-			"path": "pages/index/test",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-		},
-		{
 			"path": "pages/index/my-subscription",
 			"style": {
 				"navigationBarTitleText": "",
@@ -98,7 +91,7 @@
 				"navigationBarTitleText" : "",
 				"enablePullDownRefresh" : false
 			}
-		}
+		},
 	],
 	"condition": {
 		"current": 0,

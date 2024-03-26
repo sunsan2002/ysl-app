@@ -13,7 +13,7 @@
 import { reactive } from "vue";
 const props = defineProps({
   title: {
-    tyepe: String,
+    type: String,
   },
 });
 </script>

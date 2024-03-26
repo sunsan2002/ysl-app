@@ -31,16 +31,14 @@ const props = defineProps({
 	data: {
 		type: Object,
 		default: ()=>({
-				imgUrl: 'https://img2023.gcsis.cn/2023/5/3692fcd308d94db8b345f06d65a2b278.jpg',
-				titile: '格致论道@西湖论剑',
-				time: '18:00 - 21:00',
-				address: '杭州市滨江区文化中心剧院一层',
-				isSubscription:true
+			imgUrl: 'https://img2023.gcsis.cn/2023/5/3692fcd308d94db8b345f06d65a2b278.jpg',
+			titile: '格致论道@西湖论剑',
+			time: '18:00 - 21:00',
+			address: '杭州市滨江区文化中心剧院一层',
+			isSubscription:true
 		})
 	}
 })
-
-
 </script>
 
 <style scoped>

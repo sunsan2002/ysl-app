@@ -1,5 +1,5 @@
 <template>
-  <view class="agenda">
+  <view class="agenda top-content">
     <tabbar :current="2"></tabbar>
     <view class="top">
       <image mode="aspectFill" />
@@ -127,5 +127,8 @@ const change = () => {
     padding: 0 20rpx;
     display: block;
   }
+}
+.top-content{
+	padding-bottom: 130rpx;
 }
 </style>

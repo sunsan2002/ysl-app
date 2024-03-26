@@ -25,6 +25,7 @@ const data = reactive({
     time: "18:00 - 21:00",
     address: "杭州市滨江区文化中心剧院一层",
   },
+  
 });
 // 跳转详情界面
 const handleTurnToVideoDetail = () => {

@@ -137,7 +137,6 @@ function deleteClick(item) {
 </script>
 
 <style lang="scss" scoped>
-////////////////////////
 .center {
   display: flex;
   align-items: center;
@@ -147,7 +146,6 @@ function deleteClick(item) {
   white-space: nowrap; //溢出不换行
   text-overflow: ellipsis; //溢出省略号显示
 }
-////////////////////////
 .comment_item {
   font-size: 28rpx;
   .top {

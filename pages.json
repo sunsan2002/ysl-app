@@ -1,13 +1,13 @@
 {
 	"pages": [
 		{
+			"path": "pages/index/home"
+		},
+		{
 			"path": "pages/index/agenda"
 		},
 		{
 			"path" : "pages/components/video/video-detail"
-		},
-		{
-			"path": "pages/index/home"
 		},
 		{
 			"path": "pages/index/wonderful-life"
@@ -31,42 +31,31 @@
 			"path" : "pages/index/test"
 		},
 		{
-			"path": "pages/components/video/video-test",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+			"path": "pages/index/my-subscription"
 		},
 		{
+<<<<<<< HEAD
 			"path": "pages/index/my-subscription",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
+=======
+			"path" : "pages/components/wonderful-life-item/wonderful-life-item"
 		},
 		{
-			"path" : "pages/components/wonderful-life-item/wonderful-life-item",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
-			}
+			"path" : "pages/index/score-store"
+>>>>>>> 81d2a7f4131aa4ff1c0448f5c922c18ff7f79bba
 		},
 		{
-			"path" : "pages/index/score-store",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
-			}
+			"path" : "pages/components/store/store-item"
+			
 		},
 		{
-			"path" : "pages/components/store/store-item",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
-			}
+			"path" : "pages/index/get-award"
+		},
+		{
+			"path" : "pages/index/score-rules"
 		},
 		{
 			"path" : "pages/index/get-award",
@@ -99,12 +88,10 @@
 			{
 				"name": "大会议程详情页",
 				"path": "pages/components/video/video-detail"
-				// "query": "name=ttt"
 			},
 			{
 				"name": "展商风采详情页",
 				"path": "pages/index/exhibition-item"
-				// "query": "name=ttt"
 			}
 		]
 	},

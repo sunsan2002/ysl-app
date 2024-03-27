@@ -9,7 +9,7 @@
 		<view class="get">
 			<span class="score">{{goods.score}}</span>积分
 			+<span>{{goods.money}}</span>元
-			<view class="score-btn">兑换</view>
+			<view class="score-btn" @click="shop()">兑换</view>
 		</view></view>
 	</view>
 </template>
@@ -29,6 +29,12 @@ const props = defineProps({
 		})
 	}
 })
+
+function shop(){
+	uni.navigateTo({
+		url: '/pages/index/pay'
+	});
+}
 
 </script>
 
@@ -78,6 +84,10 @@ const props = defineProps({
 		position: absolute;
 		right: 0rpx;
 		bottom:0rpx;
+		&:active{
+			color:#fff;
+			background-color:#00c6d2;
+		}
 	}
 .score{
 	color: #00c6d2;

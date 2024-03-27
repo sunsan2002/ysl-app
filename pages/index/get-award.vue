@@ -153,7 +153,6 @@ function turn() {
 			if (index >= count * 8 + winningIndex - speedDownNum) {
 				time += speed;
 			}
-			console.log(state.curIndex);
 			index++;
 			state.curIndex = index % 8;
 
@@ -163,9 +162,8 @@ function turn() {
 			} else {
 				state.isTurning = false;
 
-				if (state.curIndex === 5 || state.curIndex === 7) {
+				if (state.curIndex === 4 || state.curIndex === 6) {
 				} else popup.value.open();
-				console.log('中奖了，奖品为：' + state.list[state.curIndex].label);
 			}
 		}, time);
 	};

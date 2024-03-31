@@ -8,7 +8,7 @@
 		<span class="top">选择支付方式</span>
 		<view class="radio">
 			<view class="left">
-				<img src="/static/icon/微信支付.png" />
+				<image class="vx-img" src="../../static/icon/微信支付.png" mode="aspectFit"/>
 				<span>微信支付</span>
 			</view>
 			<view class="input" :class="{ active: select }" @click="update()">
@@ -26,7 +26,7 @@
 		<view>
 			<uni-popup class="popup" background-color="#6c6c6c" ref="popup">
 					<view class="popup-content">
-					<img src="/static/icon/微信支付.png" />
+					<image class="vx-img" src="../../static/icon/微信支付.png"></image>
 					<view class="loader">
 					  <view class="dot"></view>
 					  <view class="dot"></view>
@@ -91,9 +91,10 @@ function close(){
 	flex-direction: column;
 	align-items: center;
 	padding:30rpx;
-	img{
-		height:80rpx;
-	}
+}
+.vx-img{
+	height:80rpx;
+	width: 80rpx;
 }
 .top {
 	color: #909090;

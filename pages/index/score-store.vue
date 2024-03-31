@@ -14,7 +14,7 @@
 				<view class="avatar-text">
 					<p>sunsan</p>
 					<view class="score">
-						<img src="/static/icon/score-icon.png" />
+						<image src="../../static/icon/score-icon.png" style="height: 40rpx;width: 40rpx;"></image>
 						<p>400</p>
 						<uni-icons type="right" size="10" color="#fff"></uni-icons>
 					</view>
@@ -28,15 +28,15 @@
 		<view class="middle">
 			<view class="btn-box">
 				
-				<button class="btn1"  @click="goTo('/pages/index/score-detail')"><img src="/static/icon/积分-实色.png" /></button>积分明细
+				<view class="btn1"  @click="goTo('/pages/index/score-detail')"><image src="../../static/icon/积分-实色.png" /></view>积分明细
 			</view>
 			<view class="btn-box">
 				
-				<button class="btn1"  @click="goTo('/pages/index/get-award')"><img src="/static/icon/订单.png" /></button>积分抽奖
+				<view class="btn1"  @click="goTo('/pages/index/get-award')"><image src="../../static/icon/订单.png" /></view>积分抽奖
 			</view>
 			<view class="btn-box">
 				
-				<button class="btn1"><img src="/static/icon/抽奖活动管理.png" /></button>订单列表
+				<view class="btn1"><image src="../../static/icon/抽奖活动管理.png" /></view>订单列表
 			</view>
 		</view>
 		<view class="bottom">
@@ -217,19 +217,19 @@ onMounted(() => {
 	align-items: center;
 }
 .btn1 {
-	border: 0;
+	border: none;
 	height:100rpx;
 	width: 100rpx;
 	background-color: #fff;
-	border-radius: 50rpx 50rpx;
-	line-height: 100rpx;
+	border-radius: 50%;
+	// line-height: 90rpx;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	img{
+}
+.btn1>image{
 		height:70rpx;
 		width: 70rpx;
-	}
 }
 .bottom{
 	padding:20rpx;

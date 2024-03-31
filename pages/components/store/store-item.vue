@@ -66,10 +66,11 @@ function shop(){
 	display: flex;
 	flex-direction: row;
 	// justify-content:space-around;
+	width: 90%;
 	color:#7f7f7f ;
 	font-size: 20rpx;
-	position: relative;
-	margin-top: 20rpx;	
+	position: absolute;
+	bottom:20rpx;
 }.score-btn{
 		height: 40rpx;
 		width: 80rpx;

@@ -53,6 +53,9 @@
 				"navigationBarTitleText" : "",
 				"enablePullDownRefresh" : false
 			}
+		},
+		{
+			"path" : "pages/index/testOne"
 		}
 	],
 	"condition": {

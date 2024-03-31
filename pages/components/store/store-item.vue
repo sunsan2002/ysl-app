@@ -1,35 +1,10 @@
 <!-- 商品列表组件 -->
 <template>
 	<view class="box">
-		
-		<img :src="goods.imgUrl"/>
-		<view class="content">
-		<p class="name">{{goods.name}}</p>
-		<p class="msg">{{goods.msg}}</p>
-		<view class="get">
-			<span class="score">{{goods.score}}</span>积分
-			+<span>{{goods.money}}</span>元
-			<view class="score-btn">兑换</view>
-		</view></view>
 	</view>
 </template>
 
 <script setup>
-
-
-const props = defineProps({
-	goods:{
-		type:Object,
-		default:()=>({
-			imgUrl:'https://obs-xhlj.obs.cn-east-3.myhuaweicloud.com/2023/5/32766db3c132417ea4a09924efe87025.jpg',
-			name:'2021年成都大运会赛事门票',
-			msg:'2021年成都大运会赛事门票',
-			score:'2500',
-			money:'12'
-		})
-	}
-})
-
 </script>
 
 <style lang="scss" scoped>

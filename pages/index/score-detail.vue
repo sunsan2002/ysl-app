@@ -6,7 +6,7 @@
 			<view class="avatar-text">
 				<p>sunsan</p>
 				<view class="score">
-					<img src="/static/icon/score-icon.png" />
+					<image src="../../static/icon/score-icon.png" style="height: 40rpx;width: 40rpx;"></image>
 					<p>400</p>
 					<uni-icons type="right" size="10" color="#fff"></uni-icons>
 				</view>

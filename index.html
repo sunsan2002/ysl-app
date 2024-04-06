@@ -1,32 +1,21 @@
-<!--
- * @Author: sunsan 2390864551@qq.com
- * @Date: 2024-03-11 22:10:18
- * @LastEditors: sunsan 2390864551@qq.com
- * @LastEditTime: 2024-03-17 14:46:41
- * @FilePath: \ysl-app\index.html
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
--->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-     <script>
-              var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') ||
-                CSS.supports('top: constant(a)'))
-              ('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' +
-                (coverSupport ? ', viewport-fit=cover' : '') + '" />')
-            </script>
-			 <script type="text/javascript" src="/uni_modules/yingbing-video/static/flv.min.js"></script>
-			        <script type="text/javascript" src="/uni_modules/yingbing-video/static/hls.min.js"></script>
-			        <script type="text/javascript" src="/uni_modules/yingbing-video/static/ybbarrage.js"></script>
-			        <script type="text/javascript" src="/uni_modules/yingbing-video/static/ybplayer.js"></script>
-			     
+    <script>
+      var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') ||
+        CSS.supports('top: constant(a)'))
+      document.write(
+        '<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' +
+        (coverSupport ? ', viewport-fit=cover' : '') + '" />')
+    </script>
     <title></title>
     <!--preload-links-->
     <!--app-context-->
   </head>
   <body>
     <div id="app"><!--app-html--></div>
-    <!-- <script type="module" src="/main.js"></script> -->
+    <script type="module" src="/main.js"></script>
   </body>
 </html>

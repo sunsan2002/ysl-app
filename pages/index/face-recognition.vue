@@ -1,17 +1,21 @@
 <template>
-  <div class="container">
+  <view class="container">
 	  <!-- <view class="video-bg"></view> -->
-    <video
+	  <span class="text1">正在识别...</span>
+	  <view>
+	   <image class="video-bg" src="/static/images/face.jpg"/>
+	  </view>
+	  <p class="text">未识别到人脸！</p>
+   <!-- <video
       class="video-bg"
       objectFit="cover"
       id="myVideo"
-      src="https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/2minute-demo.mp4"
-    ></video>
-    <div class="face-overlay">
-      <div class="circle"></div>
-    </div>
-    <button class="button">开始人脸识别</button>
-  </div>
+    ></video> -->
+    <view class="face-overlay">
+      <view class="circle"></view>
+    </view>
+    <button disabled="true" class="button">验证中</button>
+  </view>
 </template>
 <script setup>
 	
@@ -19,13 +23,20 @@
 <style lang="scss" scoped>
 .container {
   position: relative;
-  width: 90vw;
-  height: 90vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  background-color: #1F2427;
+  // opacity: 0.9;
+  align-items: center;
   justify-content: center;
+  gap:60rpx;
 }
-
+.text{
+	color: #E16261;
+	font-size: 40rpx;
+}
 .video-bg {
   top: 0;
   left: 0;
@@ -35,9 +46,7 @@
   height: 500rpx;
   width: 500rpx;
   border-radius: 50%;
-  margin-left: 50rpx;
-  margin-top: 200rpx;
-  background-image: url('../../static/video/39dbdd5a193dae54d70666d430153867.mp4');
+  border: 8rpx solid #e14d4d;
 }
 
 .face-overlay {
@@ -49,7 +58,11 @@
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-
+.text1{
+	font-size: 40rpx;
+	color: #fff;
+	margin-top: -250rpx;
+}
 
 // .face-overlay.visible {
 //   opacity: 1;

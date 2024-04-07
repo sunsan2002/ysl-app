@@ -15,7 +15,7 @@
 		</view>
 		<view class="bottom-box">
 			<span class="bottom">已有账号，</span>
-			<navigator url="/pages/index/login">立即登录</navigator>
+			<navigator url="/pages/index/face-recognition">立即登录</navigator>
 		</view>
 	</view>
 </template>

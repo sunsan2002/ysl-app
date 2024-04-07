@@ -8,7 +8,7 @@
 		<view class="grid-box">
 			<view class="grid-box__inner">
 				<view class="grid-box__item prize" v-for="(prize, i) in state.list" :class="{ active: state.curIndex === i }" :style="getGridItemStyle(i)" :key="'prize' + i">
-					<img v-if="prize.isImg" class="prizeImg" :src="prize.imgUrl" />
+					<image style="height: 100rpx;width: 100rpx;" mode="aspectFit" v-if="prize.isImg" class="prizeImg" :src="prize.imgUrl" />
 					<span :class="{ isText: prize.isImg === false }">{{ prize.label }}</span>
 				</view>
 				<view class="grid-box__item start-btn" style="background-color: #ff5500; color: #fff" @click="handleClickStartBtn()">
@@ -53,11 +53,11 @@ const state = reactive({
 		{ label: '定制u盘', imgUrl: 'https://s1.lezhi99.com/storage/prize/system/digital/30-10.png', isImg: true },
 		{ label: '手机一台', imgUrl: 'https://s1.lezhi99.com/storage/prize/system/digital/10-10.png', isImg: true },
 		{ label: 'ps5一台', imgUrl: 'https://s1.lezhi99.com/storage/prize/system/digital/10-60.png', isImg: true },
-		{ label: '现金600元', imgUrl: '/static/icon/红包.png', isImg: true },
+		{ label: '现金600元', imgUrl: '../../static/icon/红包.png', isImg: true },
 		{ label: '再来一次', imgUrl: '', isImg: false },
 		{ label: '腾讯VIP', imgUrl: 'https://s1.lezhi99.com/storage/prize/system/general/00-80.png', isImg: true },
 		{ label: '谢谢参与', imgUrl: '', isImg: false },
-		{ label: '大礼包', imgUrl: '/static/icon/礼盒 (2).png', isImg: true }
+		{ label: '大礼包', imgUrl: '../../static/icon/礼盒 (2).png', isImg: true }
 	],
 	people: [
 		{
@@ -198,10 +198,10 @@ function getWinningIndex() {
 	margin-bottom: 20rpx;
 	white-space: 8rpx;
 }
-.prize:nth-child(4) > img {
+.prize:nth-child(4) > image {
 	transform: scale(0.9);
 }
-.prize:nth-child(8) > img {
+.prize:nth-child(8) > image {
 	transform: scale(0.8);
 }
 .title > img {

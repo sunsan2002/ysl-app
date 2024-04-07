@@ -15,7 +15,7 @@
 		</view>
 		<view class="bottom-box">
 			<span class="bottom">已有账号，</span>
-			<navigator url="/pages/index/login">立即登录</navigator>
+			<navigator url="/pages/index/face-recognition">立即登录</navigator>
 		</view>
 	</view>
 </template>
@@ -23,30 +23,30 @@
 <script setup>
 import { ref } from 'vue';
 // import permision from '/utils/js_sdk/permission.js';
-import { mainLogin } from '/utils/faceLogin.js';
+// import { mainLogin } from '/utils/faceLogin.js';
 
 const name = ref('');
 const number = ref('');
 
 
 
-function register() {
-	const certifyId = mainLogin();
-	uni.startFacialRecognitionVerify({
-		certifyId: certifyId,
-		progressBarColor: '#CC0000', //刷脸圈的颜色
-		screenOrientation: 'port', //认证界面UI朝向
-		success: (e) => {
-			console.log(JSON.stringify(e));
-		},
-		fail: (e) => {
-			console.log(JSON.stringify(e));
-		},
-		complete: (e) => {
-			console.log(JSON.stringify(e));
-		}
-	});
-}
+// function register() {
+// 	const certifyId = mainLogin();
+// 	uni.startFacialRecognitionVerify({
+// 		certifyId: certifyId,
+// 		progressBarColor: '#CC0000', //刷脸圈的颜色
+// 		screenOrientation: 'port', //认证界面UI朝向
+// 		success: (e) => {
+// 			console.log(JSON.stringify(e));
+// 		},
+// 		fail: (e) => {
+// 			console.log(JSON.stringify(e));
+// 		},
+// 		complete: (e) => {
+// 			console.log(JSON.stringify(e));
+// 		}
+// 	});
+// }
 
 </script>
 

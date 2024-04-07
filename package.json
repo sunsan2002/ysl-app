@@ -16,5 +16,13 @@
             "前端组件",
             "通用组件"
         ]
+    },
+    "dependencies": {
+        "@core-player/playcore-hls": "^0.1.1",
+        "face-api.js": "^0.22.2",
+        "mui-player": "^1.8.1",
+        "uni-player": "^1.1.6",
+        "vue-core-video-player": "^0.2.0",
+        "vue3-video-play": "^1.3.2"
     }
 }

@@ -52,7 +52,7 @@
 						<view class="my-integral-font my-integral-detail" @click="goTo('/pages/index/score-detail')"><span>积分明细</span></view>
 					</view>
 				</view>
-				<button class="logout" @click="goTo('/pages/index/login')">退出登录</button>
+				<button class="logout" @click="goTo('/pages/index/register')">退出登录</button>
 			</view>
 			<uni-popup ref="popup" type="message">
 				<uni-popup-message type="success" message="签到成功!" :duration="2000"></uni-popup-message>

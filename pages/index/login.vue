@@ -88,70 +88,51 @@
  
 			// 活体认证
 			async livenessDetection() {
-				// #ifdef MP-WEIXIN
-				uni.$u.toast('请使用app进行刷脸验证')
-				// #endif
-				console.log(111)
+				// // #ifdef MP-WEIXIN
+				// uni.$u.toast('请使用app进行刷脸验证')
+				// // #endif
+				// console.log(111)
 				// #ifdef APP-PLUS
-				this.appAuth()
+				this.callco()
 				console.log(3)
 				// #endif
  
 			},
  
-			// #ifdef H5
-			// h5端实名认证
-			async h5Auth() {
-				uni.showLoading({
-					title: '认证中',
-					mask: true
-				})
- 
-				// 获取verify_token
-				const res = await getVerifyToken()
-				const verify_token = res.verify_token
-				const successUrl = encodeURIComponent(`${ H5_URL }/pages/register/faceDetect?verify_result=1`)
-				const failedUrl = encodeURIComponent(`${ H5_URL }/pages/register/faceDetect?verify_result=2`)
- 
-				// 跳转到百度云实名认证H5页
-				window.location.href = `https://brain.baidu.com/face/print/?token=${ verify_token }&successUrl=${ successUrl }&failedUrl=${ failedUrl }`
-				uni.hideLoading()
-			},
- 
-			// 活体检测成功后的处理
-			async h5VerifyIdentifyReturn() {
-				uni.showLoading({
-					title: '获取认证结果',
-					mask: true
-				})
- 
-				await h5VerifyIdentifyReturn()
-				this.successAfter()
-			},
-			// #endif
- 
 			// #ifdef APP-PLUS
 			// app端实名认证
-			appAuth() {
-				console.log(2)
-				uni.showLoading({
-					title: '认证中',
-					mask: true
+			async callco(){
+				const co1 = uniCloud.importObject("uni-sunsan")
+				let res = await co1.say()
+				uni.showModal({
+					content:JSON.stringify(res),
+					showModal:false
 				})
- 
+			},
+			appAuth() {
+				console.log(3)
+				// uni.showLoading({
+				// 	title: '认证中',
+				// 	mask: true
+				// })
 				// 1、获取实人认证设备信息
 				const metaInfo = uni.getFacialRecognitionMetaInfo()
- 
+				console.log(metaInfo)
 				// 2、提交姓名、身份证号、metaInfo到云函数获取certifyId
+				
+				
 				uniCloud.callFunction({
-					name: 'livenessDetection',
+					name: 'uni-sunsan',
 					data: {
 						step: 1,
 						metaInfo,
 						legalPerson: this.legalPerson,
 						idCard: this.idCard
-					}
+					},
+					
 				}).then(res => {
+					console.log('11111111111111111111')
+					console.log(res)
 					if (res.result.code == 500) return uni.$u.toast(res.result.msg)
  
 					const certifyId = res.result.data
@@ -189,6 +170,7 @@
 							}
 						},
 						fail: (e) => {
+							console.log('err')
 							uni.$u.toast(e.errMsg)
 						}
 					})

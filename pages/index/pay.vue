@@ -169,14 +169,14 @@ function close(){
 // 	border-radius:40rpx;
 // 	height:100rpx;
 // }
-::v-deep .uni-popup .uni-popup__wrapper {
-  border-radius: 20rpx;
-  // background-color:#5b5b5b;
-  &:second-child(){
-	  padding:0;
-  }
-  // padding:50rpx;
-}
+// ::v-deep .uni-popup .uni-popup__wrapper {
+//   border-radius: 20rpx;
+//   // background-color:#5b5b5b;
+//   &:second-child(){
+// 	  padding:0;
+//   }
+//   // padding:50rpx;
+// }
 .uni-popup-dialog{
 	border-radius:40rpx;
 }

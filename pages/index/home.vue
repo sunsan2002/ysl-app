@@ -8,6 +8,7 @@
         </swiper-item>
       </swiper>
     </view>
+	<button @click="goto()">拍照打卡</button>
     <view class="middle">
       <view class="middle-item">
         <vectically-title :title="'精彩回顾'"></vectically-title>
@@ -142,6 +143,15 @@ import homeActivity from '/pages/components/common/home-activity.vue';
 import homeGuest from '/pages/components/common/home-guest.vue';
 import homeVideoItem from '/pages/components/common/home-video-item.vue';
 import homeVideo from "/pages/components/common/home-video/home-video.vue";
+
+function goto(){
+	uni.navigateTo({
+		url: '/pages/index/sign-in',
+		success: res => {},
+		fail: () => {},
+		complete: () => {}
+	});
+}
 
 const data = reactive({
   numList: [

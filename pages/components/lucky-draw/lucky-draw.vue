@@ -9,7 +9,7 @@
           <button v-if="!data.checkEnd" type="warn" @click="checkEnd">
             查看中奖名单
           </button>
-          <img v-if="data.checkEnd" :src="data.list[data.endActive].img" />
+          <image v-if="data.checkEnd" :src="data.list[data.endActive].img" />
         </view>
       </view>
       <view class="list" v-if="!data.checkEnd">
@@ -19,7 +19,7 @@
           v-for="(item, index) in data.list"
           :key="index"
         >
-          <img :src="item.img" />
+          <image :src="item.img" />
           <view>{{ item.name }}</view>
         </view>
       </view>
@@ -141,7 +141,7 @@ onMounted(() => {
   beginTime();
 });
 </script>
-<style scoped lang="scss">
+<style scoped lang="less">
 .choose {
   display: flex;
   height: 100vh;
@@ -161,7 +161,7 @@ onMounted(() => {
 	transform: translate(-50%, -50%);
 }
 .time {
-  img {
+  image {
     width: 250rpx;
     height: 250rpx;
     border-radius: 50%;
@@ -183,7 +183,7 @@ onMounted(() => {
   .item {
     text-align: center;
     padding: 20rpx;
-    img {
+    image {
       width: 130rpx;
       height: 130rpx;
       border-radius: 50%;
@@ -217,8 +217,7 @@ onMounted(() => {
   }
 }
 .active {
-  img {
-    // border: 3px solid white;
+  image {
     box-shadow: -5px -5px 5px 5px white;
   }
 }

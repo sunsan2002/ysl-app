@@ -22,7 +22,7 @@
       </view>
     </view>
     <view class="middle">
-      <video-test ref="videoTestRef" />
+      <video-test ref="videoTestRef" :src="data.video.src"/>
     </view>
     <view class="bottom">
       <view class="nav">
@@ -82,6 +82,9 @@ const data = reactive({
   titile: "格致论道@西湖论剑",
   watchNum: 1000,
   tabbarIndex: 0,
+  video:{
+	  src:"https://img2023.gcsis.cn/2023/3/dd8d928e6e734c9592cb5833597564c6.mp4"
+  },
   handlingType: [
     {
       value: "会议议程",

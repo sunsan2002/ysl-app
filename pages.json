@@ -43,124 +43,52 @@
 			"path": "pages/index/score-rules"
 		},
 		{
-			"path": "pages/index/score-detail",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+			"path": "pages/index/score-detail"
 		},
 		{
-			"path": "pages/index/pay",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+			"path": "pages/index/pay"
 		},
 		{
-			"path": "pages/index/login",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+			"path": "pages/index/login"
 		},
 		{
-			"path": "pages/index/register",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+			"path": "pages/index/register"
 		},
 		{
-			"path": "pages/components/login/login",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+			"path": "pages/components/login/login"
 		},
 		{
-			"path": "pages/index/photo-card",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+			"path": "pages/index/photo-card"
 		},
 		{
-			"path": "pages/index/face-recognition",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+			"path": "pages/index/face-recognition"
 		},
 		{
-			"path": "pages/index/test",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
+			"path": "pages/index/test"
 		},
 		{
-			"path" : "pages/components/lucky-draw/lucky-draw",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
-			}
+			"path" : "pages/components/lucky-draw/lucky-draw"
 		},
 		{
-			"path" : "pages/index/offline",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
-			}
+			"path" : "pages/index/offline"
 		},
 		{
-			"path" : "pages/index/sign-in",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
-			}
+			"path" : "pages/index/sign-in"
 		},
 		{
-			"path" : "pages/index/apply",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
-			}
+			"path" : "pages/index/apply"
 		},
 		{
-			"path" : "pages/index/apply-msg",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
-			}
+			"path" : "pages/index/apply-msg"
 		},
 		{
-			"path" : "pages/components/agenda/question-naire",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
-			}
+			"path" : "pages/components/agenda/question-naire"
 		},
 		{
-			"path" : "pages/index/message-wall",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
-			}
+			"path" : "pages/index/message-wall"
 		},
 		{
-			"path" : "pages/components/agenda/agenda-progress",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
-			}
+			"path" : "pages/components/agenda/agenda-progress"
 		},
 		{
 			"path" : "pages/index/msg-box",
@@ -197,6 +125,14 @@
 			{
 				"name": "展商风采详情页",
 				"path": "pages/index/exhibition-item"
+			},
+			{
+				"name": "未开始会议详情页",
+				"path": "pages/index/apply"
+			},
+			{
+				"name": "已开始会议详情页",
+				"path": "pages/index/offline"
 			}
 		]
 	},

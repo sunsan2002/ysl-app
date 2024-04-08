@@ -4,7 +4,8 @@
       class="video-show"
       objectFit="cover"
       id="myVideo"
-      src="https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/2minute-demo.mp4"
+      :src="props.src"
+	  :poster="props.poster"
       @error="videoErrorCallback"
       :danmu-list="data.danmuList"
       enable-danmu
@@ -15,6 +16,14 @@
 </template>
 <script setup>
 import { reactive } from "vue";
+const props = defineProps({
+	src:{
+		type: String
+	},
+	poster:{
+		type: String
+	}
+})
 const data = reactive({
   videoConext: null,
   // 弹幕

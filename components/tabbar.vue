@@ -94,7 +94,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .tarbar-list {
 	display: flex;
 	align-items: flex-end;
@@ -109,13 +109,17 @@ export default {
 .middle{
 	border: 2px solid #4792DC;
 	background-color: rgb(248,248,248);
-	border-radius:60PX;
+	border-radius: 5rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	z-index: 99;
 	margin-bottom: 30rpx;
+	image {
+		width: 100rpx;
+		height: 100rpx;
+	}
 }
 .barPart {
 	width: 20%;

@@ -48,8 +48,10 @@ const props = defineProps({
 			width: 160rpx;
 			background-color: RGB(25,151,192);
 			image{
-				width: 120rpx;
-				height: 60rpx;
+				width: 150rpx;
+				height: 75rpx;
+				object-fit: cover; /* 图片将被缩放以保持其宽高比，同时完全包含在容器内 */
+				object-position: center; /* 图片在容器内的位置居中 */
 			}
 		}
 		.left::after{

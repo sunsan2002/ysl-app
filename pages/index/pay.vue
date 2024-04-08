@@ -1,3 +1,4 @@
+<!-- 支付页面 -->
 <template>
 	<view class="content">
 		<view class="top">需支付</view>

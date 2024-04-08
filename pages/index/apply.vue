@@ -1,3 +1,4 @@
+<!-- 报名页面 -->
 <template>
 	<view class="container">
 		<image src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT3t_pT8Xm39dPS1FE89-yt9ab3SN1xpNRP9Jl-LlaETE5itBsG"></image>
@@ -43,7 +44,7 @@
 				</view>
 			</view>
 		</view>
-		<view class="apply-btn">我要报名</view>
+		<view class="apply-btn" @click="apply()">我要报名</view>
 	</view>
 </template>
 
@@ -103,6 +104,15 @@ const state = reactive({
 		},
 	]
 });
+
+function apply(){
+	uni.navigateTo({
+		url: '/pages/index/apply-msg',
+		success: res => {},
+		fail: () => {},
+		complete: () => {}
+	});
+}
 </script>
 
 <style lang="scss" scoped>

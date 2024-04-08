@@ -1,3 +1,4 @@
+<!-- 人脸认证页面 -->
 <template>
   <view class="container">
 	  <!-- <view class="video-bg"></view> -->

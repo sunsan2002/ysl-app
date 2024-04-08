@@ -1,3 +1,4 @@
+<!-- 签到页面 -->
 <template>
 	<view class="content">
 		<view class="top">

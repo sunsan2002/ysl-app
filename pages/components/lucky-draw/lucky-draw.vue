@@ -27,6 +27,7 @@
   </view>
 </template>
 <script setup>
+import { onLoad } from "@dcloudio/uni-app";
 import { onMounted, reactive } from "vue";
 import countDowm from "@/pages/components/count-dowm/count-dowm.vue";
 const data = reactive({
@@ -131,6 +132,11 @@ const beginTime = () => {
     }
   }, 1000);
 };
+onLoad((options) => {
+  uni.setNavigationBarTitle({
+    title: options.name,
+  });
+});
 onMounted(() => {
   beginTime();
 });

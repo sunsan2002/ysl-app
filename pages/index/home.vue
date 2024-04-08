@@ -83,7 +83,7 @@
 					 <home-video-item></home-video-item>
 				 </swiper-item>
 				 <swiper-item>
-				 					 <home-video-item></home-video-item>
+				 	<home-video-item></home-video-item>
 				 </swiper-item>
 			   </swiper>
 		   </view>

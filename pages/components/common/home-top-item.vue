@@ -27,8 +27,8 @@ import { reactive } from "vue";
 const data = reactive({
   imgUrl: "/static/home-pic.png",
   logo: "/static/poster/logo.png",
-  title: "2023 西湖论剑数字安全大会",
-  time: "2023年5月5日-8日",
+  title: "2024 西湖论剑数字安全大会",
+  time: "2024年4月5日-8日",
   address: "中国·杭州",
   date: {
     day: 1,

@@ -34,6 +34,9 @@
 			<swiper-item>
 			  <agenda-home-item></agenda-home-item>
 			</swiper-item>
+			<swiper-item>
+			  <agenda-home-item></agenda-home-item>
+			</swiper-item>
           </swiper>
         </view>
       </view>
@@ -63,6 +66,9 @@
 				 <swiper-item>
 				   <home-guest></home-guest>
 				 </swiper-item>
+				 <swiper-item>
+				   <home-guest></home-guest>
+				 </swiper-item>
 			   </swiper>
 		   </view>
 	  </view>
@@ -75,6 +81,9 @@
 				 </swiper-item>
 				 <swiper-item>
 					 <home-video-item></home-video-item>
+				 </swiper-item>
+				 <swiper-item>
+				 					 <home-video-item></home-video-item>
 				 </swiper-item>
 			   </swiper>
 		   </view>

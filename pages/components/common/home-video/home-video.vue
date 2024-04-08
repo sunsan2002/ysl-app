@@ -12,20 +12,20 @@
 import { reactive } from 'vue';
 const data = reactive({
 	list:[{
-		pic:"/static/images/activities-img1.png",
+		pic:"https://tse2-mm.cn.bing.net/th/id/OIP-C.I2wpbglZRTRJM6kIloYcvwHaE7?w=269&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
 		title:"十大院士祝福视频"
 	},
 	{
-		pic:"/static/images/activities-img1.png",
-		title:"十大院士祝福视频"
+		pic:"http://localhost:5173/static/images/activities-img3.jpg",
+		title:"数字安全官高级研修班"
 	},
 	{
-		pic:"/static/images/activities-img1.png",
-		title:"十大院士祝福视频"
+		pic:"https://tse2-mm.cn.bing.net/th/id/OIP-C.2DNEIJWxiL0Mwn66DSOuKwHaNK?w=115&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+		title:"西湖论剑的十一个维度"
 	},
 	{
-		pic:"/static/images/activities-img1.png",
-		title:"十大院士祝福视频"
+		pic:"https://tse2-mm.cn.bing.net/th/id/OIP-C.1q4cZXP4swvhjZKHzDiFOQHaEL?w=326&h=184&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+		title:"西湖论剑"
 	}]
 })
 </script>

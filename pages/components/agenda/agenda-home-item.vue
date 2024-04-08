@@ -41,6 +41,8 @@ const data = reactive({
 			object-fit: cover;
 			top:0;
 			z-index: 2;
+			-webkit-mask-image: linear-gradient(rgb(0, 0, 0), 80%, transparent);
+			background-size: 100% 100%;
 		}
 		.left-show{
 			color: white;

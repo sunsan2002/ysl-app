@@ -36,7 +36,9 @@
       </view>
     </view>
     <view class="middle">
-      <video-item class="video-item" />
+		<view v-for="(item,index) in agendaData" :key="index">
+			<video-item class="video-item" :data="item" />
+		</view>
     </view>
   </view>
 </template>
@@ -45,20 +47,15 @@
 import { reactive } from "vue";
 import tabbar from "/components/tabbar.vue";
 import videoItem from "/pages/components/video/video-item";
+import { agendaData } from '/assets/js/agenda-data.js'
 const data = reactive({
   title: "大会议程",
   agendaName: "",
   agendaValue: null,
   agendaRange: [
-    { value: 0, text: "篮球" },
-    { value: 1, text: "足球" },
-    { value: 2, text: "游泳" },
   ],
   typeValue: null,
   typeRange: [
-    { value: 0, text: "篮球" },
-    { value: 1, text: "足球" },
-    { value: 2, text: "游泳" },
   ],
 });
 // 手动搜索会议名称
@@ -124,7 +121,7 @@ const change = () => {
     }
   }
   .video-item {
-    padding: 0 20rpx;
+    padding: 10rpx 30rpx;
     display: block;
   }
 }

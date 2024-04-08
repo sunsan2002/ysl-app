@@ -1,9 +1,8 @@
-<!-- 报名页面 -->
 <template>
 	<view class="container">
 		<image src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT3t_pT8Xm39dPS1FE89-yt9ab3SN1xpNRP9Jl-LlaETE5itBsG"></image>
 		<view class="top">
-			<p>AI引领 智启新程</p>
+			<p>2024年国际互联网大会</p>
 			<view class="msg" v-for="item in state.detail" :key="item.icon">
 				<uni-icons color="#8b8b8b" :type="item.icon" size="20"></uni-icons>
 				<span>{{ item.text }}</span>
@@ -12,7 +11,7 @@
 				<uni-icons color="#848484" type="redo-filled" size="20"></uni-icons>
 				分享
 			</view>
-			<view class="process">未开始</view>
+			<view class="process">已开始</view>
 		</view>
 		<view class="content">
 			<view class="tab-header">
@@ -22,9 +21,9 @@
 			<view class="tab-content">
 				<view class="page1" v-if="currentTab === 1">
 					<span>
-						行业内首次大规模的AI新品全景展示，将全面展示安恒信息在人工智能领域的最新研发成果，更将AI技术与实际应用场景紧密结合，呈现安恒信息在技术创新和产品研发方面的实力。
+						世界互联网大会是由致力于推动全球互联网发展的相关企业、组织、机构和个人等自愿结成的国际性、行业性、非营利性社会组织。该组织在中国注册，总部位于北京。
 					</span>
-					<image src="https://prod-tx-mdn-1305533294.file.myqcloud.com/static/1775046527844352.jpg"></image>
+					<image src="https://tse1-mm.cn.bing.net/th/id/OIP-C.WRrUxt1eqNtzpAKRPGvsEwHaEK?w=281&h=180&c=7&r=0&o=5&dpr=2&pid=1.7"></image>
 				</view>
 				<view v-if="currentTab === 2">
 					<view class="page1">
@@ -44,21 +43,19 @@
 				</view>
 			</view>
 		</view>
-		<view class="apply-btn" @click="apply()">我要报名</view>
 	</view>
 </template>
 
 <script setup>
 import { reactive, ref } from 'vue';
 import { onLoad } from "@dcloudio/uni-app";
-
-const currentTab = ref(2);
-
 onLoad((options) => {
   uni.setNavigationBarTitle({
     title: options.name,
   });
 });
+
+const currentTab = ref(2);
 
 function switchTab(item) {
 	currentTab.value = item;
@@ -68,7 +65,7 @@ const state = reactive({
 	detail: [
 		{
 			icon: 'calendar',
-			text: '2024.04.09 - 2024.04.11'
+			text: '2024.04.08 - 2024.04.09'
 		},
 		{
 			icon: 'map-pin-ellipse',
@@ -111,15 +108,6 @@ const state = reactive({
 		},
 	]
 });
-
-function apply(){
-	uni.navigateTo({
-		url: '/pages/index/apply-msg',
-		success: res => {},
-		fail: () => {},
-		complete: () => {}
-	});
-}
 </script>
 
 <style lang="scss" scoped>
@@ -259,19 +247,5 @@ function apply(){
 		min-width: 100%;
 		margin-top: 15rpx;
 	}
-}
-.apply-btn {
-	position: fixed;
-	bottom: 30rpx;
-	background-color: #00c6d2;
-	right: 30rpx;
-	left: 30rpx;
-	padding: 25rpx;
-	display: flex;
-	justify-content: center;
-	border-radius: 30rpx;
-	color: #fff;
-	font-weight: bold;
-	letter-spacing: 10rpx;
 }
 </style>

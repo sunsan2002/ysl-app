@@ -1,10 +1,10 @@
 {
 	"pages": [
 		{
-			"path": "pages/index/home"
+			"path": "pages/index/agenda"
 		},
 		{
-			"path": "pages/index/agenda"
+			"path": "pages/index/home"
 		},
 		{
 			"path": "pages/components/video/video-detail"
@@ -139,7 +139,23 @@
 			}
 		},
 		{
+			"path" : "pages/components/agenda/question-naire",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
 			"path" : "pages/index/message-wall",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/components/agenda/agenda-progress",
 			"style" : 
 			{
 				"navigationBarTitleText" : "",

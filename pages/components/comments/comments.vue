@@ -138,7 +138,7 @@ let tableData = ref([
     user_avatar:
       "https://img.keaitupian.cn/uploads/2021/03/15/feb4f91cad8a40d5985e0fed763b3f6c.jpg", // 评论者头像地址
     user_content:
-      "这种感觉我从未有 Cause I got a crush on you who you 你是我的 我是你的 谁 再多一眼看一眼就会爆炸 再近一点靠近点快被融化", // 评论内容
+      "中国人都深刻体会了邓小平的一句话：‘科学技术是第一生产力’；但爱因斯坦讲过，科学除了促进生产力，还促进人的精神发展，作用于人的心灵，这第二个功能不明显，却同样重要。", // 评论内容
     is_like: true, // 是否点赞
     like_count: 8, // 点赞数统计
     create_time: "2024-01-08 00:45", // 创建时间

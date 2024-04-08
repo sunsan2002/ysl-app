@@ -2,8 +2,8 @@
 <template>
 	<view class="content">
 		<view class="top">
-			<p class="title">2023年国际互联网大会</p>
-			<p>时间：2023.06.21-2023.07.01</p>
+			<p class="title">2024年国际互联网大会</p>
+			<p>时间：2024.04.08-2024.04.09</p>
 			<p>地点：杭州市滨江区文化中心剧院一楼</p>
 			<view class="left">
 				<view class="text">进行中</view>
@@ -11,7 +11,7 @@
 			</view>
 		</view>
 		<view class="btn-list">
-			<view v-for="(item, index) in state.btnList" @click="goTo(item.url)" :key="item.id" class="btn" :class="{'in-progress':item.now===true}">
+			<view v-for="(item, index) in state.btnList" :key="item.id" class="btn" :class="{'in-progress':item.now===true}" @click="handleCheck(index,item.title)">
 				<image :src="item.img" />
 				<p>{{ item.title }}</p>
 			</view>
@@ -21,6 +21,12 @@
 
 <script setup>
 import { reactive } from 'vue';
+import { onLoad } from "@dcloudio/uni-app";
+onLoad((options) => {
+  uni.setNavigationBarTitle({
+    title: options.name,
+  });
+});
 
 const state = reactive({
 	btnList: [
@@ -41,7 +47,6 @@ const state = reactive({
 			title: '留言上墙',
 			img: '../../static/icon/留言.png',
 			now: true,
-			url:'/pages/index/message-wall'
 		},
 		{
 			id: 4,
@@ -51,7 +56,7 @@ const state = reactive({
 		},
 		{
 			id: 5,
-			title: '投票评估',
+			title: '行程安排',
 			img: '../../static/icon/投票.png',
 			now: false
 		},
@@ -64,9 +69,21 @@ const state = reactive({
 	]
 });
 
-const goTo = (url) => {
+// 点击查看具体详情界面
+const handleCheck = (index,title) =>{
+	console.log(title);
+	switch(index){
+		case 1:goTo("/pages/index/message-wall",title);break;
+		case 3:goTo("/pages/components/lucky-draw/lucky-draw",title);break;
+		case 4:goTo("/pages/components/agenda/agenda-progress",title);break;
+		case 5:goTo("/pages/components/agenda/question-naire",title);break;
+		
+	}
+}
+
+const goTo = (url,title) => {
 	uni.navigateTo({
-		url: url,
+		url: url+"?name=" + title,
 		success: res => {},
 		fail: () => {},
 		complete: () => {}
@@ -74,7 +91,7 @@ const goTo = (url) => {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .content {
 	min-height: 100vh;
 	width: 100vw;

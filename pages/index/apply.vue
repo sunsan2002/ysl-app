@@ -50,8 +50,15 @@
 
 <script setup>
 import { reactive, ref } from 'vue';
+import { onLoad } from "@dcloudio/uni-app";
 
 const currentTab = ref(2);
+
+onLoad((options) => {
+  uni.setNavigationBarTitle({
+    title: options.name,
+  });
+});
 
 function switchTab(item) {
 	currentTab.value = item;
@@ -61,7 +68,7 @@ const state = reactive({
 	detail: [
 		{
 			icon: 'calendar',
-			text: '2023年2月23日-2023年2月28日'
+			text: '2024.04.09 - 2024.04.11'
 		},
 		{
 			icon: 'map-pin-ellipse',

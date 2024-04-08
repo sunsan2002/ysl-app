@@ -21,6 +21,12 @@
 
 <script setup>
 import { reactive } from 'vue';
+import { onLoad } from "@dcloudio/uni-app";
+onLoad((options) => {
+  uni.setNavigationBarTitle({
+    title: options.name,
+  });
+});
 
 const state = reactive({
 	btnList: [

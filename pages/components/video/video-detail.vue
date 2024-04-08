@@ -72,6 +72,12 @@ import { reactive, ref } from "vue";
 import videoTest from "/pages/components/video/video-test.vue";
 import comments from "/pages/components/comments/comments.vue";
 import agenda from "/pages/components/agenda/agenda.vue";
+import { onLoad } from "@dcloudio/uni-app";
+onLoad((options) => {
+  uni.setNavigationBarTitle({
+    title: options.name,
+  });
+});
 const data = reactive({
   titile: "格致论道@西湖论剑",
   watchNum: 1000,

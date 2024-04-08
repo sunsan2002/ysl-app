@@ -11,7 +11,7 @@
 			</view>
 		</view>
 		<view class="btn-list">
-			<view v-for="(item, index) in state.btnList" :key="item.id" class="btn" :class="{'in-progress':item.now===true}">
+			<view v-for="(item, index) in state.btnList" @click="goTo(item.url)" :key="item.id" class="btn" :class="{'in-progress':item.now===true}">
 				<image :src="item.img" />
 				<p>{{ item.title }}</p>
 			</view>
@@ -40,7 +40,8 @@ const state = reactive({
 			id: 3,
 			title: '留言上墙',
 			img: '../../static/icon/留言.png',
-			now: true
+			now: true,
+			url:'/pages/index/message-wall'
 		},
 		{
 			id: 4,

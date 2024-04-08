@@ -7,7 +7,7 @@
 			"path": "pages/index/agenda"
 		},
 		{
-			"path" : "pages/components/video/video-detail"
+			"path": "pages/components/video/video-detail"
 		},
 		{
 			"path": "pages/index/wonderful-life"
@@ -19,80 +19,87 @@
 			"path": "pages/index/exhibition-item"
 		},
 		{
-			"path" : "pages/index/myself"
+			"path": "pages/index/myself"
 		},
 		{
-			"path" : "pages/index/news-msg"
+			"path": "pages/index/news-msg"
 		},
 		{
-			"path" : "pages/index/article-msg"
+			"path": "pages/index/article-msg"
 		},
 		{
 			"path": "pages/index/my-subscription"
 		},
 		{
-			"path" : "pages/index/score-store"
+			"path": "pages/index/score-store"
 		},
 		{
-			"path" : "pages/components/store/store-item"
-			
+			"path": "pages/components/store/store-item"
 		},
 		{
-			"path" : "pages/index/get-award"
+			"path": "pages/index/get-award"
 		},
 		{
-			"path" : "pages/index/score-rules"
+			"path": "pages/index/score-rules"
 		},
 		{
-			"path" : "pages/index/score-detail",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
+			"path": "pages/index/score-detail",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
 			}
 		},
 		{
-			"path" : "pages/index/pay",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
+			"path": "pages/index/pay",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
 			}
 		},
 		{
-			"path" : "pages/index/login",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
+			"path": "pages/index/login",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
 			}
 		},
 		{
-			"path" : "pages/index/register",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
+			"path": "pages/index/register",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
 			}
 		},
 		{
-			"path" : "pages/components/login/login",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
+			"path": "pages/components/login/login",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
 			}
 		},
 		{
-			"path" : "pages/index/photo-card",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
+			"path": "pages/index/photo-card",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
 			}
 		},
 		{
-			"path" : "pages/index/face-recognition",
+			"path": "pages/index/face-recognition",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/index/test",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path" : "pages/components/lucky-draw/lucky-draw",
 			"style" : 
 			{
 				"navigationBarTitleText" : "",
@@ -146,10 +153,7 @@
 		"enablePullDownRefresh": true,
 		"backgroundTextStyle": "dark"
 	},
-
-	"uniIdRouter": {
-
-	},
+	"uniIdRouter": {},
 	"easycom": {
 		"autoscan": true,
 		"custom": {

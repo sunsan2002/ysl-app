@@ -14,7 +14,7 @@
 <script setup>
 import { reactive } from "vue";
 const data = reactive({
-  leftImg: "/static/home/left.jpg",
+  leftImg: "https://tse1-mm.cn.bing.net/th/id/OIP-C.l8NBl395qUTSM4EASlOk9gHaE8?w=243&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
   rightImg: "/static/images/activities-img1.png",
   leftTitle:"格物致知",
   rightTitle:"西湖论剑安全特训营"

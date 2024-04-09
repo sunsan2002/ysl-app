@@ -1,30 +1,12 @@
 <template>
   <view class="home-guest">
-    <view class="item">
+    <view class="item" v-for="(item,index) in data.userList" :key="index">
       <view class="top">
-        <image :src="data.pic"></image>
+        <image :src="item.pic"></image>
       </view>
       <view class="bottom">
-        <view class="name">{{ data.name }}</view>
-        <view class="describe">{{ data.describe }}</view>
-      </view>
-    </view>
-    <view class="item">
-      <view class="top">
-        <image :src="data.pic"></image>
-      </view>
-      <view class="bottom">
-        <view class="name">{{ data.name }}</view>
-        <view class="describe">{{ data.describe }}</view>
-      </view>
-    </view>
-    <view class="item">
-      <view class="top">
-        <image :src="data.pic"></image>
-      </view>
-      <view class="bottom">
-        <view class="name">{{ data.name }}</view>
-        <view class="describe">{{ data.describe }}</view>
+        <view class="name">{{ item.name }}</view>
+        <view class="describe">{{ item.describe }}</view>
       </view>
     </view>
   </view>
@@ -33,15 +15,29 @@
 <script setup>
 import { reactive } from "vue";
 const data = reactive({
-  pic: "/static/home/person.png",
-  name: "刘世经",
-  describe: "中国工程院院士",
+  userList: [
+    {
+      pic: "/static/home/person.png",
+      name: "刘世经",
+      describe: "基金会副理事长",
+    },
+	{
+	  pic: "https://img2023.gcsis.cn/2023/4/c113813fe5414f2e9aa7cee9a4d1030e.png",
+	  name: "沈昌祥",
+	  describe: "中国工程院院士",
+	},
+	{
+	  pic: "https://img2023.gcsis.cn/2023/4/aa1635e18de24d88b86753e1ca39a05e.png",
+	  name: "郝志强",
+	  describe: "教育与考试书记",
+	},
+  ],
 });
 </script>
 
 <style scoped lang="less">
 .home-guest {
-	display: flex;
+  display: flex;
   .item {
     width: 33.3%;
     display: flex;

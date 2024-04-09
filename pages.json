@@ -1,10 +1,10 @@
 {
 	"pages": [
 		{
-			"path": "pages/index/agenda"
+			"path": "pages/index/home"
 		},
 		{
-			"path": "pages/index/home"
+			"path": "pages/index/agenda"
 		},
 		{
 			"path": "pages/components/video/video-detail"

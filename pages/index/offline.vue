@@ -117,7 +117,6 @@ const goTo = (url,title) => {
 .content {
 	min-height: 100vh;
 	width: 100vw;
-	background-color: #f9f9f9;
 }
 .popup-container {
   position: fixed;
@@ -139,7 +138,7 @@ button {
   margin-top: 20px;
 }
 .top {
-	background-color: #31c1d4;
+	background-image: url("/static/images/exhibition-style-background.jpg");
 	height: 8rem;
 	padding: 30rpx;
 	display: flex;
@@ -173,9 +172,9 @@ button {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-color: #31C1D4;
+	background-color: #147fa3;
 	color: #fff;
-	padding: 5rpx;
+	padding: 5rpx 15rpx;
 	border-radius: 0 0 10rpx 0;
 }
 .btn-list {
@@ -189,7 +188,7 @@ button {
 		display: flex;
 		box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 		flex-direction: column;
-		padding: 60rpx;
+		padding: 45rpx;
 		align-items: center;
 		position: relative;
 		gap: 20rpx;

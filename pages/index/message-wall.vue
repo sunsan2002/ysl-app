@@ -117,7 +117,7 @@ const sendMessage = () => {
 	if (inputMessage.value.trim() === '') return;
 	const message = {
 		name: 'sunsan',
-		img: 'https://img.touxiangwu.com/uploads/allimg/2022053117/k13wromzf4o.jpg',
+		img: 'http://tupian.qqw21.com/article/UploadPic/2021-1/202111921572654663.jpg',
 		content: inputMessage.value,
 		duration: 8,
 		delay: 0,

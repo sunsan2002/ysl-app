@@ -146,7 +146,7 @@ import homeVideo from "/pages/components/common/home-video/home-video.vue";
 
 function goto(){
 	uni.navigateTo({
-		url: '/pages/index/sign-in',
+		url: '/pages/index/sign-code',
 		success: res => {},
 		fail: () => {},
 		complete: () => {}

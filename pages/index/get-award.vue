@@ -67,11 +67,18 @@ const state = reactive({
 			date: '2023-12-13'
 		},
 		{
+			name: '用户****3220',
+			award: '大礼包一份',
+			avatar: 'https://s1.lezhi99.com/static/image/no_avatar.png',
+			date: '2024-01-23'
+		},
+		{
 			name: '用户****1234',
 			award: 'u盘一枚',
 			avatar: 'https://s1.lezhi99.com/static/image/no_avatar.png',
 			date: '2023-12-13'
 		},
+		
 		{
 			name: '用户****1234',
 			award: 'u盘一枚',
@@ -88,13 +95,7 @@ const state = reactive({
 			name: '用户****1234',
 			award: 'u盘一枚',
 			avatar: 'https://s1.lezhi99.com/static/image/no_avatar.png',
-			date: '2023-12-13'
-		},
-		{
-			name: '用户****1234',
-			award: 'u盘一枚',
-			avatar: 'https://s1.lezhi99.com/static/image/no_avatar.png',
-			date: '2023-12-13'
+			date: '2024-01-23'
 		},
 		{
 			name: '用户****1234',

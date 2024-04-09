@@ -1,6 +1,12 @@
 <!-- 线下会议操作页面 -->
 <template>
 	<view class="content">
+		 <!-- 弹出框内容区域 -->
+		    <view v-show="showPopup" class="popup-container">
+		      <view class="popup-content">
+		        <text>{{ message }}</text>
+		      </view>
+		    </view>
 		<view class="top">
 			<p class="title">2024年国际互联网大会</p>
 			<p>时间：2024.04.08-2024.04.09</p>
@@ -20,8 +26,23 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue';
+import { reactive, ref } from 'vue';
 import { onLoad } from "@dcloudio/uni-app";
+
+// 弹出框显示状态
+const showPopup = ref(false);
+
+// 弹出框中的消息内容
+const message = ref('签到成功！');
+
+// 切换弹出框显示状态
+const togglePopup = () => {
+  showPopup.value = !showPopup.value;
+  setTimeout(()=>{
+	  showPopup.value = !showPopup.value
+  },2000)
+};
+
 onLoad((options) => {
   uni.setNavigationBarTitle({
     title: options.name,
@@ -73,11 +94,12 @@ const state = reactive({
 const handleCheck = (index,title) =>{
 	console.log(title);
 	switch(index){
-		case 1:goTo("/pages/index/message-wall",title);break;
+		case 0:goTo("/pages/index/sign-in",title);break;
+		case 1:goTo("/pages/index/photo-card",title);break;
+		case 2:goTo("/pages/index/message-wall",title);break;
 		case 3:goTo("/pages/components/lucky-draw/lucky-draw",title);break;
 		case 4:goTo("/pages/components/agenda/agenda-progress",title);break;
 		case 5:goTo("/pages/components/agenda/question-naire",title);break;
-		
 	}
 }
 
@@ -96,6 +118,25 @@ const goTo = (url,title) => {
 	min-height: 100vh;
 	width: 100vw;
 	background-color: #f9f9f9;
+}
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px; /* 调整弹出框高度 */
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(-100%);
+}
+
+.popup-content {
+  padding: 10px;
+}
+
+button {
+  margin-top: 20px;
 }
 .top {
 	background-color: #31c1d4;

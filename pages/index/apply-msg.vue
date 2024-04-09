@@ -13,6 +13,11 @@
 				<input type="tel" v-model="phone" placeholder="请输入电话号码" required />
 			</view>
 			<view class="form-item">
+				<text>身份证号：</text>
+				<span style="color: red">*</span>
+				<input type="tel" v-model="cardId" placeholder="请输入身份证号" required />
+			</view>
+			<view class="form-item">
 				<text>公司：</text>
 				<input type="text" v-model="company" placeholder="请输入公司名称" />
 			</view>
@@ -32,6 +37,7 @@ const name = ref('');
 const phone = ref('');
 const company = ref('');
 const position = ref('');
+const cardId = ref('')
 
 const submit = () => {
 	uni.showToast({

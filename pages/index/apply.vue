@@ -1,14 +1,14 @@
 <!-- 报名页面 -->
 <template>
 	<view class="container">
-		<image src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT3t_pT8Xm39dPS1FE89-yt9ab3SN1xpNRP9Jl-LlaETE5itBsG"></image>
+		<image mode="aspectFill" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT3t_pT8Xm39dPS1FE89-yt9ab3SN1xpNRP9Jl-LlaETE5itBsG"></image>
 		<view class="top">
 			<p>AI引领 智启新程</p>
 			<view class="msg" v-for="item in state.detail" :key="item.icon">
 				<uni-icons color="#8b8b8b" :type="item.icon" size="20"></uni-icons>
 				<span>{{ item.text }}</span>
 			</view>
-			<view class="share">
+			<view @click="share" class="share">
 				<uni-icons color="#848484" type="redo-filled" size="20"></uni-icons>
 				分享
 			</view>
@@ -120,6 +120,54 @@ function apply(){
 		complete: () => {}
 	});
 }
+
+const share = () => {
+	// #ifdef APP-PLUS
+	uni.share({
+	    provider: "weixin",
+	    scene: "WXSceneSession",
+	    type: 0,
+	    href: "http://uniapp.dcloud.io/",
+	    title: "西湖论剑",
+	    summary: "我正在参与西湖论剑网络安全大会，快来跟我一起来体验！",
+	    imageUrl: "https://prod-tx-mdn-1305533294.file.myqcloud.com/static/1775046527844352.jpg",
+	    success: function (res) {
+	        uni.showToast({
+	        	title: '分享成功！',
+	        	icon: 'success', // 弹出框图标，可选值："success"、"loading"、"none"，默认为"success"
+	        	duration: 1500, // 弹出框持续时间，单位为毫秒，默认为1500ms
+	        });
+	    },
+	    fail: function (err) {
+	        console.log("fail:" + JSON.stringify(err));
+	    }
+	});
+	// #endif
+	// #ifdef MP-WEIXIN
+	uni.share({
+	    provider: 'weixin',
+	    scene: "WXSceneSession",
+	    type: 5,
+	    imageUrl: 'https://prod-tx-mdn-1305533294.file.myqcloud.com/static/1775046527844352.jpg',
+	    title: '西湖论剑网络安全大会',
+	    miniProgram: {
+	        id: 'gh_abcdefg',
+	        path: 'pages/index/home',
+	        type: 0,
+	        webUrl: 'http://uniapp.dcloud.io'
+	    },
+	    success: ret => {
+	        uni.showToast({
+	        	title: '分享成功！',
+	        	icon: 'success', // 弹出框图标，可选值："success"、"loading"、"none"，默认为"success"
+	        	duration: 1500, // 弹出框持续时间，单位为毫秒，默认为1500ms
+	        });
+	    }
+	});
+	// #endif
+	
+	
+}
 </script>
 
 <style lang="scss" scoped>
@@ -140,7 +188,7 @@ function apply(){
 	> p {
 		font-weight: bold;
 	}
-	.share {
+	.share {	
 		position: absolute;
 		right: 0;
 		background-color: #e3e3e3;

@@ -5,11 +5,11 @@
         <p>{{ item.name }}</p>
       </view>
     </view>
-    <view class="middle" v-if="item.type">
+<!--    <view class="middle" v-if="item.type">
       <video-item class="video-item" />
       <video-item class="video-item" />
-    </view>
-    <view class="middle" v-else>
+    </view> -->
+    <view class="middle">
       <article-item
         v-for="item in state.articles"
         :key="item.title"
@@ -31,21 +31,21 @@ const state = reactive({
   type: 0,
   articles: [
     {
-      imgUrl: "/static/images/activities-img2.jpg",
+      imgUrl: "../../static/images/activities-img2.jpg",
       title: "西湖论剑安全特训营·网络攻防蓝队实战技法进阶班",
       time: "2023-05-04 09:00 - 18:00",
     },
     {
-      imgUrl: "/static/images/activities-img3.jpg",
+      imgUrl: "../../static/images/activities-img3.jpg",
       title: "西湖论剑安全特训营·数字安全官高级研修班",
       time: "22023-05-04 09:00 - 18:00 ",
     },
   ],
 });
 
-const pages = getCurrentPages();
-const currentPage = pages[pages.length - 1];
-const item = JSON.parse(currentPage.$page.options.item);
+// const pages = getCurrentPages();
+// const currentPage = pages[pages.length - 1];
+// const item = JSON.parse(currentPage.$page.options.item);
 
 
 

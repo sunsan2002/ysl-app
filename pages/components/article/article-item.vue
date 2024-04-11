@@ -17,7 +17,7 @@ const props = defineProps({
 	articleItem: {
 		type: Object,
 		default: () => ({
-			imgUrl: '/static/images/activities-img2.jpg',
+			imgUrl: '../../static/images/activities-img2.jpg',
 			title: '西湖论剑安全特训营·网络攻防蓝队实战技法进阶班',
 			time: '2023-05-04 09:00 - 18:00'
 		})

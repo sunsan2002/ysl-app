@@ -1,7 +1,7 @@
 <!-- 报名页面 -->
 <template>
 	<view class="container">
-		<image mode="aspectFill" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT3t_pT8Xm39dPS1FE89-yt9ab3SN1xpNRP9Jl-LlaETE5itBsG"></image>
+		<image mode="aspectFill" src="https://pub-naibabao-com-1302155418.cos.ap-guangzhou.myqcloud.com/2023/03/15/97179453.png"></image>
 		<view class="top">
 			<p>AI引领 智启新程</p>
 			<view class="msg" v-for="item in state.detail" :key="item.icon">
@@ -52,7 +52,7 @@
 import { reactive, ref } from 'vue';
 import { onLoad } from "@dcloudio/uni-app";
 
-const currentTab = ref(2);
+const currentTab = ref(1);
 
 onLoad((options) => {
   uni.setNavigationBarTitle({
@@ -68,7 +68,7 @@ const state = reactive({
 	detail: [
 		{
 			icon: 'calendar',
-			text: '2024.04.09 - 2024.04.11'
+			text: '2024.04.12 - 2024.04.13'
 		},
 		{
 			icon: 'map-pin-ellipse',
@@ -80,7 +80,7 @@ const state = reactive({
 		},
 		{
 			icon: 'staff',
-			text: '参会人数200人'
+			text: '已经预约人数230人'
 		}
 	],
 	process:[
@@ -101,8 +101,13 @@ const state = reactive({
 		},
 		{
 			id:6,
-			time:'09:45 - 09:50',
+			time:'10:10 - 10:30',
 			title:'发布仪式：DAS三大核心能力图谱OR智能体全景图发布'
+		},
+		{
+			id:7,
+			time:'10:40 - 11:00',
+			title:'新品发布'
 		},
 		{
 			id:10,
@@ -143,6 +148,7 @@ const share = () => {
 	    }
 	});
 	// #endif
+	
 	// #ifdef MP-WEIXIN
 	uni.share({
 	    provider: 'weixin',
@@ -165,9 +171,8 @@ const share = () => {
 	    }
 	});
 	// #endif
-	
-	
 }
+
 </script>
 
 <style lang="scss" scoped>

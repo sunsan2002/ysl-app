@@ -31,12 +31,12 @@ export const agendaData = reactive([
 		},
 	},
 	{
-		title: " 4月9日",
+		title: " 4月12日",
 		videoItem: {
 		  imgUrl:
 		    "https://prod-tx-mdn-1305533294.file.myqcloud.com/static/1775046527844352.jpg",
 		  titile: "AI引领 智启新程",
-		  time: "2024.04.09 - 2024.04.11",
+		  time: "2024.04.12 - 2024.04.13",
 		  address: "杭州洲际酒店·国际厅2厅",
 			type:{
 				type:2,

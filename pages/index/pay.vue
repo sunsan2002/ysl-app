@@ -149,6 +149,7 @@ function close(){
 	padding: 5rpx;
 }
 .btn{
+	color:#fff;
 	position:fixed;
 	bottom:60rpx;
 	right:50rpx;
@@ -159,7 +160,6 @@ function close(){
 	line-height:80rpx;
 	font-weight:600;
 	font-size:33rpx;
-	color:#343434;
 	letter-spacing:1rpx;
 	// font-family:'隶书';
 }

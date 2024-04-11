@@ -12,7 +12,7 @@
 			<p>时间：2024.04.08-2024.04.09</p>
 			<p>地点：杭州市滨江区文化中心剧院一楼</p>
 			<view class="left">
-				<view class="text">进行中</view>
+				<view class="text">已结束</view>
 				<uni-icons type="right" color="#fff" size="20"></uni-icons>
 			</view>
 		</view>
@@ -55,19 +55,19 @@ const state = reactive({
 			id: 1,
 			title: '现场签到',
 			img: '../../static/icon/现场签到.png',
-			now: true
+			now: false
 		},
 		{
 			id: 2,
 			title: '拍照打卡',
 			img: '../../static/icon/拍照.png',
-			now: true
+			now: false
 		},
 		{
 			id: 3,
 			title: '留言上墙',
 			img: '../../static/icon/留言.png',
-			now: true,
+			now: false,
 		},
 		{
 			id: 4,
@@ -85,7 +85,7 @@ const state = reactive({
 			id: 6,
 			title: '问卷调查',
 			img: '../../static/icon/问卷调查.png',
-			now: false
+			now: true
 		}
 	]
 });
@@ -94,7 +94,7 @@ const state = reactive({
 const handleCheck = (index,title) =>{
 	console.log(title);
 	switch(index){
-		case 0:goTo("/pages/index/sign-in",title);break;
+		case 0:goTo("/pages/index/sign-code",title);break;
 		case 1:goTo("/pages/index/photo-card",title);break;
 		case 2:goTo("/pages/index/message-wall",title);break;
 		case 3:goTo("/pages/components/lucky-draw/lucky-draw",title);break;

@@ -16,7 +16,7 @@ const data = reactive({
 		title:"十大院士祝福视频"
 	},
 	{
-		pic:"http://localhost:5173/static/images/activities-img3.jpg",
+		pic:"../../static/images/activities-img3.jpg",
 		title:"数字安全官高级研修班"
 	},
 	{

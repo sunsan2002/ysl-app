@@ -8,7 +8,7 @@
         </swiper-item>
       </swiper>
     </view>
-	<button @click="goto()">拍照打卡</button>
+	<!-- <button @click="goto()">拍照打卡</button> -->
     <view class="middle">
       <view class="middle-item">
         <vectically-title :title="'精彩回顾'"></vectically-title>

@@ -28,6 +28,16 @@
 <script setup>
 import { ref } from 'vue';
 
+// const 1800 = ref(0)
+
+// uni.getSystemInfo({
+//   success: function (res) {
+//     // 获取窗口高度
+//     1800 = res.1800;
+// 	console.log(1800)
+//   }
+// });
+
 const messages = ref([
 	{
 		name: 'sunsan',
@@ -35,7 +45,7 @@ const messages = ref([
 		content: '今天大会很精彩~',
 		duration: 10,
 		delay: 0,
-		top: Math.random() * (window.innerHeight-40)
+		top: Math.floor(Math.random() * (1351 - 50 + 1)) + 50
 	},
 	{
 		name: '用户2',
@@ -43,7 +53,7 @@ const messages = ref([
 		content: '今天大会很精彩~',
 		duration: 14,
 		delay: 0,
-		top: Math.random() * (window.innerHeight-40)
+		top: Math.floor(Math.random() * (1351 - 50 + 1)) + 50
 	},
 	{
 		name: '用户3',
@@ -51,7 +61,7 @@ const messages = ref([
 		content: '今天大会很精彩~',
 		duration: 12,
 		delay: 0,
-		top: Math.random() * (window.innerHeight-40)
+		top: Math.floor(Math.random() * (1351 - 50 + 1)) + 50
 	},
 	{
 		img: 'https://img.touxiangwu.com/uploads/allimg/2022053117/ivhiashhpu1.jpg',
@@ -59,7 +69,7 @@ const messages = ref([
 		content: '感谢主办方的辛苦付出！',
 		duration: 10,
 		delay: 0,
-		top: Math.random() * (window.innerHeight-40)
+		top: Math.floor(Math.random() * (1351 - 50 + 1)) + 50
 	},
 	{
 		img: 'https://img.touxiangwu.com/uploads/allimg/2022053117/4iiyukjqu43.jpg',
@@ -67,7 +77,7 @@ const messages = ref([
 		content: '感谢嘉宾的指导！',
 		duration: 6,
 		delay: 0,
-		top: Math.random() * (window.innerHeight-40)
+		top: Math.floor(Math.random() * (1351 - 50 + 1)) + 50
 	},
 	{
 		img: 'https://img.touxiangwu.com/uploads/allimg/2022053117/2kekoxb3arc.jpg',
@@ -75,7 +85,7 @@ const messages = ref([
 		content: '加油，小程序团队！',
 		duration: 8,
 		delay: 0,
-		top: Math.random() * (window.innerHeight-40)
+		top: Math.floor(Math.random() * (1351 - 50 + 1)) + 50
 	},
 	{
 		img: 'https://img.touxiangwu.com/uploads/allimg/2022053117/fr5n4mf150k.jpg',
@@ -83,7 +93,7 @@ const messages = ref([
 		content: '期待下一次活动！',
 		duration: 9,
 		delay: 0,
-		top: Math.random() * (window.innerHeight-40)
+		top: Math.floor(Math.random() * (1351 - 50 + 1)) + 50
 	},
 	{
 		img: 'https://img.touxiangwu.com/uploads/allimg/2022053117/ta5vzinpqzk.jpg',
@@ -91,7 +101,7 @@ const messages = ref([
 		content: '祝大会取得圆满成功！',
 		duration: 12,
 		delay: 0,
-		top: Math.random() * (window.innerHeight-40)
+		top: Math.floor(Math.random() * (1351 - 50 + 1)) + 50
 	},
 	{
 		img: 'https://img.touxiangwu.com/uploads/allimg/2022053117/0jexeqzaccz.jpg',
@@ -99,7 +109,7 @@ const messages = ref([
 		content: '今天大会很精彩~',
 		duration: 8,
 		delay: 0,
-		top: Math.random() * (window.innerHeight-40)
+		top: Math.floor(Math.random() * (1351 - 50 + 1)) + 50
 	},
 	{
 		img: 'https://img.touxiangwu.com/uploads/allimg/2022053117/h3ceztjuuub.jpg',
@@ -107,7 +117,7 @@ const messages = ref([
 		content: '这个小程序做的不错！',
 		duration: 10,
 		delay: 0,
-		top: Math.random() * (window.innerHeight-40)
+		top: Math.floor(Math.random() * (1351 - 50 + 1)) + 50
 	}
 ]);
 
@@ -119,9 +129,9 @@ const sendMessage = () => {
 		name: 'sunsan',
 		img: 'http://tupian.qqw21.com/article/UploadPic/2021-1/202111921572654663.jpg',
 		content: inputMessage.value,
-		duration: 8,
+		duration: 10,
 		delay: 0,
-		top: Math.random() * (window.innerHeight-40)
+		top: Math.floor(Math.random() * (351 - 50 + 1)) + 50
 	};
 	messages.value.push(message);
 	inputMessage.value = '';
@@ -131,10 +141,10 @@ const sendMessage = () => {
 <style scoped>
 .container {
 	width: 100vw;
-	height: 95vh;
+	height: 100vh;
 	position: relative;
 	overflow: hidden;
-	background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-geometric-creative-banner-background-general-background-image_46060.jpg');
+	background-image: url('../../static/images/wall.jpg');
 	background-position-x: center;
 	background-size: cover;
 }

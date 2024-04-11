@@ -59,7 +59,7 @@ const imgUrl = ref('');
 const photoList = ref([
 	{
 		avatar: 'http://tupian.qqw21.com/article/UploadPic/2021-1/202111921572654663.jpg',
-		username: 'sunsan',
+		username: 'fleexxx',
 		photo: 'https://obs-xhlj.obs.cn-east-3.myhuaweicloud.com/2023/5/8f9165a37c6e495fa2c3d87e3ca40292.jpg',
 		comment: '今天的大会很精彩'
 	},
@@ -92,9 +92,6 @@ function takePhoto() {
 				src: res.tempFilePaths[0],
 				success: function (image) {
 					imgUrl.value = image.path;
-					console.log(image.width);
-					console.log(image.height);
-					console.log(res.tempFilePaths[0]);
 					showPrompt.value = true;
 					showBtn.value = false;
 				}
@@ -123,7 +120,7 @@ function sendClick() {}
 function addData() {
 	photoList.value.push({
 		avatar: 'http://tupian.qqw21.com/article/UploadPic/2021-1/202111921572654663.jpg',
-		username: 'sunsan',
+		username: 'flexxx',
 		photo: imgUrl.value,
 		comment: commentValue.value
 	});

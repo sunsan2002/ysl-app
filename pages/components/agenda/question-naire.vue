@@ -26,6 +26,7 @@
     </view>
     <view class="bottom">
       <button
+	  @click="goTo()"
         size="default"
         type="default"
         style="
@@ -47,6 +48,20 @@ onLoad((options) => {
     title: options.name,
   });
 });
+
+function goTo(){
+	uni.showToast({
+		title: '提交！',
+		icon: 'success', // 弹出框图标，可选值："success"、"loading"、"none"，默认为"success"
+		duration: 1500, // 弹出框持续时间，单位为毫秒，默认为1500ms
+	});
+	uni.navigateTo({
+		url: '/pages/index/offline',
+		success: res => {},
+		fail: () => {},
+		complete: () => {}
+	});
+}
 </script>
 
 <style scoped lang="less">

@@ -67,52 +67,37 @@
 			"path": "pages/index/test"
 		},
 		{
-			"path" : "pages/components/lucky-draw/lucky-draw"
+			"path": "pages/components/lucky-draw/lucky-draw"
 		},
 		{
-			"path" : "pages/index/offline"
+			"path": "pages/index/offline"
 		},
 		{
-			"path" : "pages/index/sign-in"
+			"path": "pages/index/sign-in"
 		},
 		{
-			"path" : "pages/index/apply"
+			"path": "pages/index/apply"
 		},
 		{
-			"path" : "pages/index/apply-msg"
+			"path": "pages/index/apply-msg"
 		},
 		{
-			"path" : "pages/components/agenda/question-naire"
+			"path": "pages/components/agenda/question-naire"
 		},
 		{
-			"path" : "pages/index/message-wall"
+			"path": "pages/index/message-wall"
 		},
 		{
-			"path" : "pages/components/agenda/agenda-progress"
+			"path": "pages/components/agenda/agenda-progress"
 		},
 		{
-			"path" : "pages/index/msg-box",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
-			}
+			"path": "pages/index/msg-box"
 		},
 		{
-			"path" : "pages/index/sign-code",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
-			}
+			"path": "pages/index/sign-code"
 		},
 		{
-			"path" : "pages/index/invite-page",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
-			}
+			"path": "pages/index/invite-page"
 		}
 	],
 	"condition": {
